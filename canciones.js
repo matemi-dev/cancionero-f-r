@@ -1,2546 +1,549 @@
-/*
-  CANCIONERO PAL' FOGÓN — las canciones
-
-  Cada canción tiene:
-    titulo  → nombre de la canción
-    ritmo   → zamba, chacarera, chamamé, cueca...
-    tono    → el tono en que está ESCRITA la letra de abajo
-    miTono  → el tono en que la cantás vos (la app la muestra así al abrirla)
-    letra   → acordes ENCIMA de la letra, como en el cancionero de papel
-
-  Reglas para escribir la letra:
-    - Una línea con solo acordes, seguida de una línea de letra = acordes sobre esa letra.
-    - "Intro: Dm Am E7 Am (x2)" = etiqueta + acordes sueltos.
-    - Una línea TODA EN MAYÚSCULAS (ESTRIBILLO, SEGUNDA, ...) = título de sección.
-    - Línea vacía = separación entre estrofas.
-*/
+// CANcionero PAL' FOGÓN — folklóricas + rock
+// 68 canciones. Datos unificados para la app.
 
 const CANCIONES = [
-
-{
-  titulo: "Perfume de carnaval",
-  ritmo: "Zamba",
-  tono: "Bm",
-  miTono: "Bm",
-  letra: `
-Bm              D
-Me voy solo con mi suerte
-         A7         D
-la llevaré en mi recuerdo
-B7              Em
-bajo un añoso algarrobo
-B7              Em
-cortaba el aire un pañuelo
-F#7             G
-bailando una vieja zamba
-             D      F#7 Bm
-yo le entregaba mis sueños.
-
-Bm              D
-El sol quemaba en la tarde
-         A7         D
-siluetas que parecían
-B7              Em
-fantasmas amarillentos
-B7              Em
-llenos de tierra y de vida
-F#7             G
-y yo rendido a tus ojos
-             D      F#7 Bm
-sintiendo que me querías.
-
-ESTRIBILLO
-Am B7           Em
-¡Ay! Perfume de carnaval
-     A7         D
-ya nunca la hei de olvidar
-     B7         Em
-su piel llevaba el aroma
-     B7         Em
-de flor y tierra mojada
-F#7             G
-bellos recuerdos que siempre
-             D F#7 Bm
-los llevo dentro del alma.
-
-SEGUNDA
-Bm                          D
-¡Ay! Tiempos donde han quedado
-            A7              D
-donde he perdido mis sueños
-B7                          Em
-quién sabe si ella se acuerda
-B7                          Em
-de un viejo mes de febrero
-F#7                      G
-y de aquel baile del campo
-         D      F#7 Bm
-y de mi amor verdadero.
-
-Bm           D
-No quise decirte nada
-         A7                 D
-la amé en silencio esa tarde
-B7           Em
-y sobre sus trenzas negras
-B7           Em
-dejé mis coplas sentidas
-F#7          G
-me fui llevando sus ojos
-         D       F#7 Bm
-un miércoles de cenizas.
-
-ESTRIBILLO
-Am B7        Em
-¡Ay! Perfume de carnaval
-     A7      D
-ya nunca la hei de olvidar
-     B7      Em
-su piel llevaba el aroma
-     B7      Em
-de flor y tierra mojada
-F#7          G
-bellos recuerdos que siempre
-         D F#7 Bm
-los llevo dentro del alma.
-`
-},
-
-{
-  titulo: "Flor azul",
-  ritmo: "Chacarera",
-  tono: "Am",
-  miTono: "Am",
-  letra: `
-Intro: Dm Am E7 Am (x2)
-
-Am
-Que solo me voy quedando
-Dm Am
-mi viejo tunal
-Dm Am
-oyendo cantar al río
-E7  Am
-para el carnaval.
-
-Intro: Dm Am E7 Am (x2)
-
-Am
-Me acompaña la esperanza
-Dm Am
-en la soledad
-Dm Am
-cuando silba el huairamuyo
-E7  Am
-por el salitral.
-
-Intro: Dm Am E7 Am (x2)
-
-Am
-Árbol fuiste bien coposo,
-Dm Am
-pobre corazón,
-Dm Am
-árbol que quedó sin hojas
-E7  Am
-sin nido, ni amor.
-
-ESTRIBILLO
-Am
-Dile, dile chacarera
-Dm Am
-a esa flor azul
-Dm Am
-que de noche yo la busco
-E7  Am
-por la cruz del sur.
-
-SEGUNDITA
-Intro: Dm Am E7 Am (x2)
-
-Am
-Esa pena enamorada
-Dm Am
-pena sin cesar
-Dm Am
-buscando volverse copla
-E7  Am
-pa' hacerme llorar.
-
-Intro: Dm Am E7 Am (x2)
-
-Am
-Cuando recuerdo sus ojos
-Dm Am
-de dulce mirar,
-Dm Am
-me acomodo con mi perro
-E7  Am
-solito a pitar.
-
-Am
-Amalaya con la suerte
-Dm Am
-que a mí me ha tocao
-Dm Am
-cantar por cantar, cantando
-E7  Am
-sin ser escuchao.
-
-ESTRIBILLO
-Am
-Dile, dile chacarera
-Dm Am
-a esa flor azul
-Dm Am
-que de noche yo la busco
-E7  Am
-por la cruz del sur.
-`
-},
-
-{
-  titulo: "Entra a mi pago sin golpear",
-  ritmo: "Chacarera",
-  tono: "Dm",
-  miTono: "Am",
-  letra: `
-Intro: A7 Dm (x2) · Dm F A7 Dm (x2)
-
-    Bb                           C              F
-Fue mucho mi penar andando lejos del pago
-F       G                           F
-Tanto correr pa' llegar a ningún lado
-A7             Dm                A7 Dm
-Si estaba donde nací lo que buscaba por ahí.
-
-Intermedio: Dm F A7 Dm (x2)
-
-    Bb                           C              F
-Es solo la amistad que no se compra ni vende
-F       G                              F
-Solo se da cuando en el pecho se siente
-A              Dm
-No es algo que se ha de usar
-A7             Dm
-cuando le sirva y nada más.
-
-Intermedio: Dm F A7 Dm (x2)
-
-    Bb                        C              F
-Así es como se da en la amistad mis paisanos
-F           G                             F
-Sus manos son pancacho y mate cebado
-A              Dm
-Y la flor de la humildad
-A              Dm
-suele su rancho perfumar.
-
-ESTRIBILLO
-    Bb                              C              F
-La vida me han prestau y tengo que devolverla
-F           G                             F
-Cuando el creador me llame para la entrega
-A              Dm
-Que mis huesos piel y sal
-A              Dm
-abonen de mi suelo natal.
-
-SEGUNDITA
-Intro: A7 Dm (x2) · Dm F A7 Dm (x2)
-
-   Bb                         C             F
-La luna es un terrón que alumbra con luz prestada
-F           G                            F
-Solo al cantor que canta coplas del alba
-A              Dm
-Le estalla en el corazón
-A              Dm
-eso que trepa por su voz.
-
-Intermedio: Dm F A7 Dm (x2)
-
-Bb                            C                F
-Cantor para cantar si nada dicen sus versos
-F      G                         F
-Ay para qué vas a callar al silencio
-A              Dm
-Si ese silencio cantor
-A              Dm
-lleno de duendes en la voz.
-
-Intermedio: Dm F A7 Dm (x2)
-
-   Bb                         C                F
-Mi pueblo es un cantor que canta la chacarera
-F           G                               F
-No ha de cantar lo que muy dentro no sienta
-A              Dm
-Cuando lo quiera escuchar
-A              Dm
-entra a mi pago sin golpear.
-
-ESTRIBILLO
-Bb                                    C           F
-La vida me han prestau y tengo que devolverla
-F           G                               F
-Cuando el creador me llame para la entrega
-A                       Dm
-Que mis huesos piel y sal
-A                       Dm
-abonen de mi suelo natal.
-`
-},
-
-{
-  titulo: "Carito",
-  ritmo: "Chamamé",
-  tono: "D",
-  miTono: "D",
-  letra: `
-   D
-Sentado solo en un banco en la ciudad,
-                            Em
-con tu mirada recordando el litoral,
-       G                        D              B7
-tu suerte quiso estar partida mitad verdad, mitad mentira,
-       Em               A7           D
-como esperanza de los pobres prometida.
-
-D
-Andando solo bajo la llovizna gris,
-                                Em
-fingiendo duro que tu vida fue de aquí.
-          G                                    D             B7
-¿Por qué cambiaste un mar de gente por donde gobierna la flor?
-       Em     A7                D D7
-Mirá que el río nunca regaló el color.
-
-ESTRIBILLO
-G      F#m B7
-Carito, yo soy tu amigo
-   Em A7                 Am7 D7
-Me ofrezco árbol para tu nido
-G      F#m B7
-Carito, suelta tu canto
-   Em                    A7    Am7 D7
-Que el abanico en mi acordeón lo está esperando
-
-Solo de armónica: Em A7 D B7 Em A7 D D7 G A7 D B7 Em A7 D
-
-G            F#m B7
-Carito, suelta tu pena
-       Em     A7                Am7 D7
-Se haga diamante tu lágrima entre mis cuerdas
-G            F#m B7
-Carito, suelta tu piedra
-   Em         A7                D
-Para volar como el zorzal en primavera
-
-Solo de armónica: Em A7 D B7 Em A7 D D7 G A7 D B7 Em A7 D
-
-   D
-En Buenos Aires los zapatos son modernos,
-                                        Em
-pero no lucen como en la plaza de un pueblo.
-       G                                D           B7
-Dejá que tu luz chiquitita le hable en secreto a la canción
-          Em              A7            D
-para que te ilumine un poco más el sol.
-
-D
-Cualquier semilla cuando es planta quiere ver
-                                Em
-la misma estrella de aquel atardecer,
-       G                        D              B7
-que la salvó del pico agudo refugiándola al oscuro
-       Em               A7           D
-de la gaviota arrasadora de los surcos.
-`
-},
-
-{
-  titulo: "Al jardín de la república",
-  ritmo: "Zamba",
-  tono: "Em",
-  miTono: "Dm",
-  letra: `
-Intro: B7 Em B7 Em
-
-        G          D        G
-Desde el norte traigo en el alma
-    D       G D             G
-La alegre zamba que canto aquí
-    B7             Em
-Y que bailen los tucumanos
-    B7             Em
-Con entusiasmo propio de allí
-    B7             Em
-Cada cual sigue a su pareja
-    B7             Em
-Joven o viejo de todo vi
-
-        G          D        G
-Media vuelta y la compañera
-D           G D             G
-Forma una rueda para seguir
-    B7             Em
-Viene el gaucho le hace un floreo
-    B7             Em
-Y un zapateo comienza allí
-    B7             Em
-Sigue el gaucho con su floreo
-    B7             Em
-Y el zapateo comienza allí
-
-ESTRIBILLO
-E7      Am
-Para las otras no
-D7      G
-Pa' las del norte sí
-    B7             Em
-Para las tucumanas
-    B7             Em
-Mujer galana naranjo en flor
-    B7             Em
-Todo lo que ellas quieran
-    B7             Em
-Que la primera ya terminó
-
-Intro: B7 Em B7 Em
-
-        G          D        G
-No me olvido, viera compadre
-    D       G D             G
-De aquellos bailes que hacen allí
-    B7             Em
-Tucumanos y tucumanas
-    B7             Em
-Todos se afanan por divertir
-    B7             Em
-Y se hace linda esta mala vida
-    B7             Em
-Así se olvida que hay que morir
-
-        G          D       G
-Empanadas y vino en jarra
-D G         D          G
-Una guitarra bombo y violín
-    B7             Em
-Y unas cuantas mozas bizarras
-    B7             Em
-Pa' que la farra pueda seguir
-    B7             Em
-Sin que falten esos coleros
-    B7             Em
-Viejos cuenteros que hagan reír
-
-ESTRIBILLO
-E7      Am
-Para las otras no
-D7      G
-Pa' las del norte sí
-    B7             Em
-Para las de Simoca
-    B7             Em
-Mis ansias locas de estar allí
-    B7             Em
-Para brindarles mi alma
-    B7             Em
-En esta zamba que canto aquí
-`
-},
-
-{
-  titulo: "Arenosa",
-  ritmo: "Cueca",
-  tono: "Bm",
-  miTono: "Bm",
-  letra: `
-Bm F#7 Bm
-Arenosa, arenosita
-A7 D
-Mi tierra cafayateña
-    G              E
-El que bebe de su vino
-F#7         Bm
-Gana sueño y pierde pena
-    G              E
-El que bebe de su vino
-F#7         Bm
-Gana sueño y pierde pena
-
-Bm F#7 Bm
-El agua de Calchaquí
-A7                 D
-Padre de todas las siembras
-    G                      E
-Cuando uno se va y no vuelve
-F#7         Bm
-Canta llorando y se aleja
-    G                      E
-Cuando uno se va y no vuelve
-F#7         Bm
-Canta llorando y se aleja
-
-ESTRIBILLO
-Em A7
-Arena, arenita
-G               D
-Arena, tapa mi huella
-Bm              E
-Para que en las vendimias
-   F#7          Bm
-Mi vida yo vuelva a verla
-Bm              E
-Para que en las vendimias
-   F#7          Bm
-Mi vida yo vuelva a verla
-
-SEGUNDA
-Bm F#7 Bm
-Luna de los medanales
-A7          D
-Lunita cafayateña
-    G              E
-Luna de arena morena
-   F#7          Bm
-En carnavales de ausencia
-     G             E
-Luna de arena morena
-   F#7          Bm
-En carnavales de ausencia
-
-Bm F#7 Bm
-Deja que beba en tu vino
-   A7 D
-savia cafayateña
-     G             E
-Y que me pierda en la cueca
-     F#7                 Bm
-Cantando antes que me muera
-        G             E
-Y que me pierda en la cueca
-F#7         Bm
-Cantando antes que me muera
-
-ESTRIBILLO
-Em A7
-Arena, arenita
-G               D
-Arena, tapa mi huella
-Bm                 E
-Para que en las vendimias
-   F#7          Bm
-Mi vida yo vuelva a verla
-G               E
-Para que en las vendimias
-   F#7          Bm
-Mi vida yo vuelva a verla
-`
-},
-
-{
-  titulo: "La simple (Solo pa' bailarla)",
-  ritmo: "Chacarera",
-  tono: "Am",
-  miTono: "F#m",
-  letra: `
-Intro: E7 Am
-
-Am           E7
-Esta es solo pa' bailarla
-E7              Am
-esta simple chacarera
-Am           E7
-con un poco de tierrita
-E7           Am
-baila cualquiera
-
-Intro: E7 Am
-
-Am           E7
-Tiene sangre emborrachada
-E7              Am
-y una noche que ya es nuestra
-Am           E7
-alcanza para empaparme
-E7           Am
-y matar las penas
-
-Intro: E7 Am
-
-Am           E7
-No hay final para esta noche
-E7              Am
-mientras haiga chacarera
-Am           E7
-infinita colección
-E7           Am
-pedí la que quieras
-
-ESTRIBILLO
-Am           E7
-Esta es solo pa' bailarla
-E7              Am
-esta simple chacarera
-Am           E7
-con un poco de tierrita
-E7           Am
-baila cualquiera
-
-SEGUNDA
-Inter: E7 Am
-
-Am           E7
-Hay para todos los gustos
-E7              Am
-te emocionan, te enamoran
-Am          E7
-y cuando la escuchan lejos
-E7              Am
-muchos la lloran
-
-Intro: E7 Am
-
-Am          E7
-La sangre de la guitarra
-E7              Am
-y las manos santiagueñas
-Am          E7
-la combinación perfecta
-E7              Am
-sobre las cuerdas
-
-Intro: E7 Am
-
-Am          E7
-Sea simple, sea doble
-E7              Am
-en el corazón retumba
-Am          E7
-como si fuera que un bombo
-E7          Am
-al pecho te apunta
-
-ESTRIBILLO
-Am          E7
-Esta es solo pa' bailarla
-E7              Am
-esta simple chacarera
-Am          E7
-con un poco de tierrita
-E7          Am
-baila cualquiera
-`
-},
-
-{
-  titulo: "El olvidado",
-  ritmo: "Chacarera",
-  tono: "Am",
-  miTono: "Em",
-  letra: `
-Intro: Am Dm E7 Am (x2)
-
-Am Dm E7                Am
-Soy el que quedó en medio e' los rancho
-F           B7                      E7
-guacho de fia'o a mate y guiso inventado
-Dm  Am                  E7               Am
-hambre y rebelión fueron creciendo en mis manos
-
-Am Dm E7                Am
-de tu palo soy hijo de tu cuero
-F           B7                      E7
-soy el olvidao en la alcancía del tiempo
-Dm      Am              E7               Am
-el que se quedó de pie poniéndole el pecho
-
-Intro: Am Dm E7 Am (x2)
-
-Am Dm E7                Am
-No quiero de más quiero lo que es mío
-F           B7                      E7
-almas o trampiao voy a torcerle el destino
-Dm  Am                  E7               Am
-levantate cagón que aquí canta un argentino
-
-Am Dm E7                Am
-flor obrera soy silvestre de espuma
-F           B7                      E7
-cuando el tren se va miro en las vías la luna
-Dm      Am              E7               Am
-pensando tal vez mi pago encuentre fortuna
-
-Intro: Am Dm E7 Am (x2)
-
-ESTRIBILLO
-Am Dm E7                Am
-Soy el olvidao el mismo que un día
-F                           G C
-se puso de pie tragando tierra y saliva
-Dm      Am              E7               Am
-caminó hacia el sol para curar las heridas
-
-Am Dm E7                Am
-Mi bofe se hinchó cuando repartieron
-F                           B7               E7
-de mí no se acuerdan dicen que nunca me vieron
-Dm      Am              E7               Am
-que no soy de aquí que ya no tengo remedio
-
-ESTRIBILLO
-Am Dm E7                Am
-Soy el olvidao el mismo que un día
-F                           G C
-se puso de pie tragando tierra y saliva
-Dm      Am              E7               Am
-caminó hacia el sol para curar las heridas
-
-SEGUNDA
-Intro: Am Dm E7 Am (x2)
-
-Am Dm E7                Am
-Una herida soy buscando el salario
-F                           B7               E7
-maestro de pie cuidando pichones blancos
-Dm      Am              E7               Am
-que madurarán iluminando mi pago
-
-Intro: Am Dm E7 Am (x2)
-`
-},
-
-{
-  titulo: "Chacarera de la tía Rosa",
-  ritmo: "Chacarera",
-  tono: "C",
-  miTono: "A",
-  letra: `
-Intro: D G D G (x2)
-
-C
-Andaba yo por el monte y pasó un carancho zumbando
-   G                              D             G
-Y atrás una manga'i lora que lo traían cascoteando
-
-Intro: D G D G (x2)
-
-C
-Me topé con un zorrito y me topé una yarará
-   G                                 D G
-Me he topau con tus ojitos chiquita por qué será
-
-Intro: D G D G (x2)
-
-Laraira laraira larailalalala-la
-
-C
-Lo otro día por las casas ha pasao la tía Rosa
-G                                 D G
-Andaba desesperada buscando no sé qué cosa
-
-ESTRIBILLO
-   C                                 D
-Chacaré chacarerita de los montes sí señor
-      D                    G         D               G
-Que bailen grandes y chicos, plantas y bichos y qué sé yo
-
-SEGUNDA
-Intro: D G D G (x2)
-
-C
-Igual que aquellas catitas los de abajo se han unido
-G                                 D G
-Pa' espantar al gato grande cuando saquea los nidos
-
-Intro: D G D G (x2)
-
-C
-Chinita arisca del monte ojitos de sachacabra
-G                                 D G
-No me has dao para trampearte vidita media palabra
-
-Intro: D G D G (x2)
-
-C
-Me acuerdo lo que buscaba la tía Rosa esa vuelta
-G                                 D G
-Buscaba no sé qué flores que la poniban contenta
-
-ESTRIBILLO
-   C                                 D
-Chacaré chacarerita de los montes sí señor
-      D                  G             D
-Que bailen todos y todas mientras más seamos mucho
-G
-mejor
-`
-},
-
-{
-  titulo: "Cachito, campeón de Corrientes",
-  ritmo: "Chamamé",
-  tono: "G",
-  miTono: "E",
-  letra: `
-Instrumental acordeón: D G D G · C G · D C G
-
-G
-Desde Corrientes a Buenos Aires un señor lo vino a buscar,
-                                      D
-cuando estacionó su auto vino el barrio a saludar:
-F                C                 G
-¡Chau, Cachito, chau! Vas a ser el campeón,
-   F                           C   G
-desde aquí te alentaremos por la televisión.
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-
-G
-En la noche del debut Corrientes 'taba prendido,
-                                      D
-y un solo grito se oyó cuando el correntino entró:
-F                   C                          G
-¡Vamos, Cachito, vamos, debés ser el campeón!
-F                              C      G
-Desde aquí te alentaremos por la televisión.
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-
-Instrumental acordeón: D G D G · C G · D C G
-
-G
-El correntino saltarín mostraba su inocencia,
-                                      D
-y entre las cuerdas se vio sangrar sus redondas cejas.
-F                   C                          G
-¿Qué pensará mi madre? Ay, ay, sí, ¿qué pensará?
-F                              C      G
-¿Qué pensará mi barrio? Ay, ay, sí, ¿qué pensará?
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-
-G
-¿Qué me estará pasando, que no lo puedo parar?
-                    D
-Este me está matando de verdad...
-F                   C                          G
-¿Cómo estará mi madre? Ay, ay, sí, ¿cómo estará?
-F                              C      G
-¿Cómo estará mi pueblo? Ay, ay, sí, ¿cómo estará?
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-
-Instrumental acordeón: D G D G · C G · D C G
-
-G
-Llora Corrientes, llora la derrota de su campeón,
-                                              D
-el jueves llega Cachito en el micro de las dos...
-F               C                 G
-Y ese señor del auto no aparece por Corrientes
-   F                           C  G
-porque dice que es suficiente el dinero que ganó,
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-
-F               C                 G
-Y ese señor del auto no aparece por Corrientes
-F               C                 G
-porque dice que es suficiente el dinero que ganó.
-   D C G
-Oy-oy-oy, oy-oy-oy, oy-oy-oy.
-`
-},
-
-{
-  titulo: "Luna tucumana",
-  ritmo: "Zamba",
-  tono: "Dm",
-  miTono: "Dm",
-  letra: `
-Intro: Gm Dm A7 Dm A7 Dm
-
-    A7      Dm
-Yo no le canto a la luna
-    A7         Dm
-porque alumbra nada más
-Gm      Dm
-le canto porque ella sabe
-A7      Dm
-de mi largo caminar.
-Gm      Dm
-le canto porque ella sabe
-A7      Dm
-de mi largo caminar.
-
-    A7      Dm
-Ay lunita tucumana
-A7          Dm   D7
-tamborcito calchaquí
-Gm      Dm
-compañera de los gauchos
-A7      Dm
-en la senda del Tafí.
-Gm      Dm
-compañera de los gauchos
-A7      Dm
-en la senda del Tafí.
-
-ESTRIBILLO
-C7      F
-Perdido en las cerrazones
-    C7                 F       D7
-quién sabe vidita por dónde andaré
-Gm      Dm
-mas cuando salga la luna
-A7 Dm
-cantaré, cantaré
-Gm      Dm
-a mi Tucumán querido
-A7      Dm
-cantaré, cantaré, cantaré.
-
-SEGUNDA
-Intro: Gm Dm A7 Dm A7 Dm
-
-    A7      Dm
-Con esperanza o con pena
-    A7 Dm
-en los campos de Acheral
-Gm          Dm
-yo he visto a la luna buena
-A7      Dm
-besando el cañaveral.
-Gm      Dm
-yo he visto a la luna buena
-A7      Dm
-besando el cañaveral.
-
-    A7            Dm
-En algo nos parecemos
-    A7            Dm
-luna de la soledad
-Gm      Dm
-yo voy andando y cantando
-    A7            Dm
-que es mi modo de alumbrar.
-Gm      Dm
-yo voy andando y cantando
-    A7            Dm
-que es mi modo de alumbrar.
-
-ESTRIBILLO
-C7      F
-Perdido en las cerrazones
-    C7                 F       D7
-quién sabe vidita por dónde andaré
-Gm      Dm
-mas cuando salga la luna
-A7 Dm
-cantaré, cantaré
-Gm      Dm
-a mi Tucumán querido
-A7      Dm
-cantaré, cantaré, cantaré.
-`
-},
-
-{
-  titulo: "Luna cautiva",
-  ritmo: "Zamba",
-  tono: "D",
-  miTono: "D",
-  letra: `
-D                       A7
-De nuevo estoy de vuelta,
-                          D
-después de larga ausencia;
-                    G
-igual que la calandria
-     Gm                 D
-que azota el vendaval.
-                    A7
-Y traigo mil canciones
-                 D
-como leñita seca:
-                 Em
-recuerdo de fogones
-       A7              D
-que invitan a matear.
-
-             A7
-Y divisé tu rancho
-             D
-a orillas del camino;
-             G
-adonde los jazmines
-   Gm        D
-tejieron un altar.
-             A7
-Al pie del calicanto,
-                    D
-la luna cuando pasa
-             Em
-peinó mi serenata
-     A7              D
-la cresta del sauzal.
-
-ESTRIBILLO
-                       F#
-Tu amor es una estrella
-                       Bm
-con cuerdas de guitarra:
-                        A7
-una luz que me alumbra
-             D
-en mi oscuridad.
-                 A7
-Acércate a la reja;
-                           D
-sos la dueña de mi alma;
-                 Em
-sos mi luna cautiva
-         A7             D
-que me besa y se va.
-(bis)
-
-SEGUNDA
-                     A7
-Escucha que mis grillos
-                        D
-están enamorados;
-            G
-que llora mi guitarra,
-Gm          D
-sollozo del sauzal;
-            A7
-el tintinear de espuelas
-         D
-del río allá en el vado
-         Em
-y una noche serena,
-     A7              D
-prendida en mi cantar.
-
-                     A7
-De nuevo estoy de vuelta;
-                        D
-mi tropa está en la huella:
-            G
-arrieros musiqueros
-Gm          D
-me ayudan a llegar.
-            A7
-Tuve que hacer un alto
-         D
-por un toro mañero,
-         Em
-allá en el calicanto,
-     A7              D
-a orillas del sauzal.
-
-ESTRIBILLO
-                  F#
-Tu amor es una estrella
-                     Bm
-con cuerdas de guitarra:
-                     A7
-una luz que me alumbra
-         D
-en mi oscuridad.
-         A7
-Acércate a la reja;
-                        D
-sos la dueña de mi alma;
-            Em
-sos mi luna cautiva
-     A7              D
-que me besa y se va.
-(bis)
-`
-},
-
-{
-  titulo: "Agitando pañuelos",
-  ritmo: "Zamba",
-  tono: "F#m",
-  miTono: "F#m",
-  letra: `
-Intro: F#m F#7 Bm E7 A C#7 · F#m E D C#7 Bm A C#7 F#m
-
-F#m F#7 Bm      E7                         A                       C#7
-Te vi, no olvidaré... un carnaval, guitarra, bombo y violín
-F#m E D     C#7 Bm              A C#7 F#m
-agitando pañuelos te vi cadencia al bailar, airoso el perfil.
-F#m E D         C#7 Bm          A C#7 F#m
-agitando pañuelos te vi cadencia al bailar, airoso el perfil.
-
-F#m F#7     Bm              E7                                  A       C#7
-Me fui diciendo adiós y en ese adiós quedó enredado un querer.
-F#m E D         C#7 Bm A                   C#7                       F#m
-Agitando pañuelos me fui ¡Qué lindo añorar tu zamba de ayer!...
-F#m E D         C#7 Bm A                   C#7                       F#m
-Agitando pañuelos me fui ¡Qué lindo añorar tu zamba de ayer!...
-
-ESTRIBILLO
-F#m F#7 Bm                 E7                                A       C#7
-Yo me iré, tú vendrás... Yo te llevaré, mi rancho se alegrará.
-F#m E D         C#7 Bm A C#7 F#m
-Agitando pañuelos me iré y en mí vivirá aquel carnaval.
-F#m E D         C#7 Bm             A                         C#7 F#m
-Agitando pañuelos me iré cantando esta zamba repiqueteadita.
-
-SEGUNDA
-Intro: F#m F#7 Bm E7 A C#7 · F#m E D C#7 Bm A C#7 F#m
-
-F#m F#7 Bm                 E7                                A          C#7
-Volví y te encontré... toda mi voz le dio a la copla un cantar.
-F#m E D         C#7 Bm A              C#7                          F#m
-Agitando pañuelos volví, sintiendo también mi pecho agitar.
-F#m E D         C#7 Bm          A     C#7 F#m
-Agitando pañuelos volví, sintiendo también mi pecho agitar.
-
-F#m F#7 Bm          E7                        A                         C#7
-Bailé hasta el final... engualichao, bailé hasta el amanecer.
-F#m E D         C#7 Bm A              C#7                       F#m
-Agitando pañuelos bailé. ¡Qué lindo bailar las zambas de ayer!
-F#m E D         C#7 Bm A              C#7                       F#m
-Agitando pañuelos bailé. ¡Qué lindo bailar las zambas de ayer!
-
-ESTRIBILLO
-F#m F#7 Bm                 E7                                A       C#7
-Yo me iré, tú vendrás... Yo te llevaré, mi rancho se alegrará.
-F#m E D         C#7 Bm A C#7 F#m
-Agitando pañuelos me iré y en mí vivirá aquel carnaval.
-F#m E D         C#7 Bm             A                         C#7 F#m
-Agitando pañuelos me iré cantando esta zamba repiqueteadita.
-`
-},
-
-{
-  titulo: "Desde el puente carretero",
-  ritmo: "Chacarera",
-  tono: "G",
-  miTono: "G",
-  letra: `
-Intro con melodía de violín: G G D G (x2)
-
-G7       C
-Si pasás por mi provincia
-         G
-con tu familia viajero
-         D
-verás qué lindo es el río
-         G
-desde el Puente Carretero.
-
-Melodía violín: G G D G (x2)
-
-G7       C
-Es cuna de mil recuerdos
-         G
-de amores y de nostalgias
-         D
-corazón entrelazado
-         G
-entre Santiago y La Banda.
-
-Melodía violín: G G D G (x2)
-
-G7       C
-Será el Puente Carretero
-         G
-que va cortando caminos
-         D
-para llegar a los brazos
-         G
-donde me espera un cariño.
-
-ESTRIBILLO
-G7       C
-Encontrarás en mi tierra
-         G
-cantores de salamanca
-         D
-para que nunca te olvides
-         G
-aromas a Santiago manta.
-
-SEGUNDA
-G7     C
-Por nada olvides viajero
-         G
-lo que sienten mis paisanos
-         D
-seguro te han de querer
-         G
-como se quiere a un hermano.
-
-Melodía violín: G G D G (x2)
-
-G7  C
-Y cuando llega la noche
-    G
-te pasás mirando el río
-    D
-seguro que algún dorado
-    G
-se besa con el rocío.
-
-Melodía violín: G G D G (x2)
-
-G7  C
-Coplitas que van naciendo
-    G
-de mi corazón travieso
-    D
-me hacen cosquillas en el alma
-    G
-cuando se agranda el silencio.
-
-ESTRIBILLO
-G7  C
-Encontrarás en mi tierra
-       G
-cantores de salamanca
-       D
-para que nunca te olvides
-       G
-aromas a Santiago manta.
-`
-},
-
-{
-  titulo: "Campo afuera",
-  ritmo: "Chacarera",
-  tono: "Em",
-  miTono: "Em",
-  letra: `
-Intro: B7 Em B7 Em B7 Em B7 Em
-
-Em     C F#7                 B7
-Hace tiempo y buscando por ahí una chacarera
-Am D7 G                 C
-allá en los montes que hay en mi pago
-B7 Em
-campo afuera.
-
-       B7 Em                         B7
-Campo de la rudita monte adentro'e Tulumba
-       Em               Am D7 G C
-la he de encontrar linda su bata de percal
-   B7            Em
-baila Doña Dominga la chacarera.
-
-Em             C F#7             B7
-Abajito de un tala la vi por ser montaraza
-Am D7 G C
-y unos tizones de leña mansa
-B7 Em
-la aromaban.
-
-       B7 Em                 B7
-La aromaban con su olor unos gajos de tala
-       Em            Am D7               G C
-que supo cortar mi amigo Don Vivas al caer
-   B7            Em
-el invierno pasado para su corral.
-
-Em             C F#7             B7
-Y en la tierrita suelta al barrer de las alpargatas
-Am     D7 G C
-dentro'e los montes subió la luna
-B7 Em
-pa' alumbrarla.
-
-ESTRIBILLO
-D      Em            D       Em
-Como nube en el aire quedó el polvaderal
-Am D7 G C
-ojito'i tala flecos de luna
-B7 Em
-la chacarera.
-
-SEGUNDA
-Em               C           F#7      B7
-Con su bata de puro percal va Doña Dominga
-Am D7 G C
-todas las flores que hay en el monte
-B7 Em
-se la envidian.
-
-       B7 Em                 B7
-Se la envidian porque no hay un color más hermoso
-       Em          Am D7 G                 C
-que el de su percal, ni moza que sepa regalar
-   B7                        Em
-el donaire que tiene su buen zarandear.
-
-Em              C F#7            B7
-Y las niñas quisieran bailar como lo hace ella
-Am D7 G C
-la trenza al viento y una manito en
-B7 Em
-la cadera.
-
-       B7 Em                         B7
-Su cadera es un vaivén parecido al del sauce
-       Em Am                 D7 G C
-y al mimbre también, esa es mi abuela se saben decir
-   B7            Em
-los changos del monte cuantito la ven.
-
-Em              C F#7            B7
-Si a los sesenta la baila así lo que ha sido en antes
-Am D7 G C
-una corzuela lujosa de ágil
-B7 Em
-deje nomás.
-
-ESTRIBILLO
-D           Em       D           Em
-Como nube en el aire quedó el polvaderal
-Am D7 G C
-ojito'i tala flecos de luna
-B7 Em
-la chacarera.
-`
-},
-
-{
-  titulo: "Zamba para un bohemio guitarrero",
-  ritmo: "Zamba",
-  tono: "Am",
-  miTono: "F#m",
-  letra: `
-Am            Dm
-Ovillado por el vino
-G7            C
-tu canto eriza la noche.
-E                 C
-Y al escuadrón guitarrero tu voz
-A7               Dm
-con el lucero lo esconde.
-E                 F
-Y al escuadrón guitarrero tu voz
-    E            Am
-con el lucero lo esconde.
-
-Am            Dm
-Guitarrero enamorado
-G7            C
-abrazao con la pobreza
-E                 C
-mira del cielo llorando el ayer
-A7               Dm
-las estrellas con tristeza.
-E                 F
-mira del cielo llorando el ayer
-    E            Am
-las estrellas con tristeza.
-
-ESTRIBILLO
-G7                C
-Solito como la urpila
-       C7                 F
-Coquito Cáceres canta
-E                                F
-canta pechando las penas su voz
-           E                 Am
-de su bohemia atormentada.
-E                                F
-canta pechando las penas su voz
-           E                 Am
-de su bohemia atormentada.
-
-INSTRUMENTAL ZAMBA
-
-SEGUNDA
-Am                Dm
-Tu canto beben las calles
-       G7              C
-de mi pueblo santiagueño
-E                 C
-cuando el silencio se hace soledad
-A7               Dm
-y la noche ata el sueño.
-E                            F
-cuando el silencio se hace soledad
-    E                Am
-y la noche ata el sueño.
-
-Am           Dm
-Madurando carnavales
-    G7                 C
-tu guitarra moja el alba
-E            C
-y en el remanso de tu corazón
-A7           Dm
-una chacarera baila.
-E            F
-y en el remanso de tu corazón
-    E        Am
-una chacarera baila.
-
-ESTRIBILLO
-G7           C
-Solito como la urpila
-        C7                F
-Coquito Cáceres canta
-E                                F
-canta pechando las penas su voz
-        E                    Am
-de su bohemia atormentada.
-E                                F
-canta pechando las penas su voz
-        E                    Am
-de su bohemia atormentada.
-`
-},
-
-{
-  titulo: "Aquel tiempo de mi infancia",
-  ritmo: "Escondido",
-  tono: "Dm",
-  miTono: "Dm",
-  letra: `
-Intro: Dm Gm A7 Dm (x2)
-
-Dm              Gm            A7          Dm
-Quiero volver aquel tiempo como quien mira hacia adentro
-Bis: Dm Gm A7 Dm
-Dm              Gm            A7          Dm
-aquel tiempo de mi infancia de soles y de recuerdos
-Bis: Dm Gm A7 Dm
-
-    D7      Gm                 C           F/C
-achalay qué linda vida volver a andar las distancias
-    Dm/C        Dm/Bb             A7               Dm
-caminar las calles viejas, sentir sus nuevas fragancias
-Dm          Gm                 A7                  Dm
-el viejo tren de mi pueblo es la esperanza que andaba
-Bis: Dm Gm A7 Dm
-
-        D7      Gm                C             F
-yo era humito de mi gente, humito que se quemaba
-    Dm/C Dm/Bb                    A7            Dm
-como brasita en el fuego, como cigarrito en chala
-    Dm      Gm          A7         Dm
-y de soles y de lunas solito me fui criando
-Bis: Dm Gm A7 Dm (se acaba)
-
-    D7          Gm          C                 F
-entre medio los cantores, florecido dentro el alma
-    Dm/C Dm/Bb              A7                  Dm
-primavera que llegaban en capullos y flores blancas
-
-SEGUNDA
-    Dm      Gm              A7                  Dm
-Soy el fruto de la vida de dos ramas que se unieron
-Bis: Dm Gm A7 Dm
-    Dm          Gm                   A7             Dm
-de dos ramas que a la tierra le dieron sus frutos nuevos
-Bis: Dm Gm A7 Dm
-
-        D7      Gm             C                F
-y en el beso de mi madre subí a cabalgar mi sueño
-    Dm/C Dm/Bb                    A7            Dm
-en un mundo de ilusiones de música y canto lleno
-    Dm          Gm                   A7         Dm
-quise volverme en la noche soy tucu tucu y cigarra
-Bis: Dm Gm A7 Dm
-
-    D7      Gm              C                F
-un corazón de vidala quise ser parche de caja
-    Dm/C Dm/Bb                 A7               Dm
-para que alegre mis penas en días o noches largas
-    Dm      Gm          A7         Dm
-y de soles y de lunas solito me fui criando
-Bis: Dm Gm A7 Dm
-
-    D7          Gm                   C              F
-Santiago vuelvo a tu lado, quiero secar hoy mi llanto
-    Dm/C        Dm/Bb             A7                Dm
-dame la magia y la suerte, quiero ser de nuevo chango.
-`
-},
-
-{
-  titulo: "Dejame que me vaya",
-  ritmo: "Chacarera",
-  tono: "Am",
-  miTono: "F#m",
-  letra: `
-Intro: Am Am Dm E7 Am
-
-Am
-Aunque me duela el alma
-Dm
-y se me quiebre el pecho
-Dm
-dejame que me vaya
-Am
-a olvidarme tus besos
-F
-dejame que me vaya
-Dm E7  Am
-a olvidarme tus besos.
-
-Am
-A dónde iré no importa
-Dm
-no intentes detenerme
-Dm
-total sabés de sobra
-Am
-que en vano fue quererte.
-F
-total sabés de sobra
-Dm E7  Am
-que en vano fue quererte.
-
-Am
-No creo en tus promesas
-Dm
-no me hagas juramentos
-Dm
-ni bien tu voz lo suelta
-Am
-ya se los lleva el viento.
-F
-ni bien tu voz lo suelta
-Dm E7  Am
-ya se los lleva el viento.
-
-ESTRIBILLO
-Am
-Siempre en el corazón
-Dm
-guardo una chacarera
-Dm
-dejame que me vaya
-Am
-y que con ella muera.
-F
-dejame que me vaya
-Dm E7  Am
-y que con ella muera.
-
-SEGUNDA
-Am
-Aunque me duela el alma
-Dm
-tan solo pienso en irme
-Dm
-no quiero estar mañana
-Am
-crucificado y triste.
-F
-no quiero estar mañana
-Dm E7  Am
-crucificado y triste.
-
-Am
-Del hueco de tus manos
-Dm
-blancas como el azúcar
-Dm
-bebí los desengaños
-Am
-probé las amarguras.
-F
-bebí los desengaños
-Dm E7  Am
-probé las amarguras.
-
-Am
-La miel que vos me diste
-Dm
-no estaba hecha de flores
-Dm
-de algún rencor hiciste
-Am
-la miel de tus amores
-F
-de algún rencor hiciste
-Dm E7  Am
-la miel de tus amores.
-
-ESTRIBILLO
-Am
-Siempre en el corazón
-Dm
-guardo una chacarera
-Dm
-dejame que me vaya
-Am
-y que con ella muera.
-F
-dejame que me vaya
-Dm E7  Am
-y que con ella muera.
-`
-},
-
-{
-  titulo: "Alma de rezabaile",
-  ritmo: "Chacarera",
-  tono: "Em",
-  miTono: "Dm",
-  letra: `
-Intro: G A G A
-
-G A G A
-El baile ya ha comenzado
-G A G A
-allá por Santiago del Estero
-B7          Em
-retumba toda la selva
-B7          Em
-el repicar de un bombo legüero.
-
-G A G A
-De fiesta toda la noche
-G A G A
-el dulce brillo de las estrellas
-B7          Em
-bailaba la Telesita
-B7          Em
-que era la danza, que era la reina.
-
-G A G A
-Nochecitas santiagueñas
-G A G A
-ardientes, puras noches de plata
-B7          Em
-la luna sobre del monte
-B7          Em
-en luz brillante se desparrama.
-
-ESTRIBILLO
-G A G A
-Que baile la Telesita
-G A G A
-dulce y fragante como las flores
-B7          Em
-gritaba la paisanada
-B7          Em
-emborrachada de amores.
-
-SEGUNDA
-Inter: G A G A
-
-G A G A
-Qué busca la pobrecita
-G A G A
-tal vez la danza le dé un consuelo
-B7          Em
-tu pollera remolino
-B7          Em
-tus pies descalzos, trompo de fuego.
-
-G A G A
-Telesita, Telesita
-G A G A
-te has vuelto lluvia, te has vuelto luna,
-B7          Em
-te has vuelto flor de los campos
-B7          Em
-te has vuelto brisa que me perfuma.
-
-G A G A
-Han pasado muchos años
-G A G A
-pero tu pueblo nunca te olvida
-B7          Em
-bailando en los rezabailes
-B7          Em
-para que tu alma siga encendida
-
-ESTRIBILLO
-G A G A
-Que baile la Telesita
-G A G A
-dulce y fragante como las flores
-B7          Em
-gritaba la paisanada
-B7          Em
-emborrachada de amores.
-`
-},
-
-{
-  titulo: "Zamba de amor en vuelo",
-  ritmo: "Zamba",
-  tono: "Am",
-  miTono: "Am",
-  letra: `
-Intro: Dm Am E7 Am A7 · Dm Am E7 Am E7
-
-Am
-Como un tizón encendido
-Dm
-ardiendo dentro mi sangre
-G7
-tu sombra viene conmigo
-C          A7
-y no la puedo arrancar.
-   Dm                Am
-Te llevo por los caminos
-                        E7
-como un abrojo prendido,
-       Am A7
-prendido a mi caminar.
-Dm     Am
-Te llevo por los caminos
-G F                     E7
-como un abrojo prendido,
-           Am
-prendido a mi guitarrear.
-
-Am
-Por esas ramas del viento
-Dm
-veo anunciado tu pelo
-G7
-y en los alambres del tiempo
-C          A7
-jirones de soledad.
-Dm         Am
-Se deshilacha el recuerdo
-           E7
-sabiendo que estás muy lejos
-       Am A7
-y que ya no volverás.
-Dm     Am
-Se deshilacha el recuerdo
-G F                     E7
-sabiendo que estás muy lejos
-                        Am
-de aquella nuestra verdad.
-
-ESTRIBILLO
-G7     C A7 Dm
-Estremecidos de cielo
-       Am A7 Dm
-yo vi tus ojos llorar.
-       Am
-La noche pide guitarra
-       E7
-la zamba busca el olvido
-       Am A7 Dm
-y yo te quiero cantar.
-                   Am
-La noche pide guitarra
-   G F E7
-la zamba busca el camino
-               Am
-yo no te puedo olvidar.
-
-SEGUNDA
-Intro: Dm Am E7 Am A7 · Dm Am E7 Am E7
-
-Am
-Como un sutil alfarero
-Dm
-te fui tallando en mis sueños
-G7
-a golpe de greda y fuego
-C              A7
-a fuerza de tanto amar.
-Dm             Am
-Y en el telar de un coplero
-               E7
-te dibujé verso a verso
-         Am A7
-para no perderte más.
-Dm             Am
-Y en el telar de un coplero
-G F            E7
-te dibujé verso a verso
-               Am A7
-para besarte al cantar.
-
-Am
-Aquella luna perdida
-Dm
-como un capullo en el cielo
-G7
-se me hace que es tu pañuelo
-C              A7
-que en una zamba se va.
-Dm             Am
-Y en el temblor del lucero
-               E7
-como siguiendo tu vuelo
-         Am A7
-mis pensamientos se van.
-Dm             Am
-Y en el temblor del lucero
-   G F         E7
-como siguiendo tu vuelo
-         Am
-mi amor, mi amor te sale a buscar.
-
-ESTRIBILLO
-G7     C A7 Dm
-Estremecidos de cielo
-       Am A7 Dm
-yo vi tus ojos llorar.
-       Am
-La noche pide guitarra
-       E7
-la zamba busca el olvido
-       Am A7 Dm
-y yo te quiero cantar.
-                   Am
-La noche pide guitarra
-   G F E7
-la zamba busca el camino
-               Am
-yo no te puedo olvidar.
-`
-},
-
-{
-  titulo: "Balderrama",
-  ritmo: "Zamba",
-  tono: "Em",
-  miTono: "Am",
-  letra: `
-Em             D
-Orillitas del canal
-D7                   G B7
-cuando llega la mañana
-Em                F#7
-sale cantando la noche
-B7                Em
-desde lo del Balderrama
-G                    A
-sale cantando la noche
-B7                Em
-desde lo del Balderrama
-
-Em             D
-Adentro puro temblar
-D7                   G B7
-el bombo con la baguala
-Em                F#7
-y se alborota quemado
-B7                Em
-dele chispear la guitarra
-G                    A
-y se alborota quemado
-B7                Em
-dele chispear la guitarra
-
-ESTRIBILLO
-Em     A
-Lucero solito
-D7 G B7
-brote del alma
-Em                F#7
-¿Dónde iremos a parar
-B7                   Em
-si se apaga Balderrama?
-G                 A
-¿Dónde iremos a parar
-B7                   Em
-si se apaga Balderrama?
-
-SEGUNDA
-Intro: Em A G A G B7 Em
-
-Em             D
-Si uno se pone a cantar
-D7                   G B7
-un cochero lo acompaña
-Em                F#7
-y en cada vaso de vino
-B7                Em
-tiembla el lucero del alba
-G                    A
-y en cada vaso de vino
-B7                Em
-tiembla el lucero del alba
-
-Em             D
-Zamba del amanecer
-D7                   G B7
-arrullo de Balderrama
-Em                F#7
-llora por la medianoche
-B7                Em
-canta por la madrugada
-G                    A
-llora por la medianoche
-B7                Em
-canta por la madrugada
-
-ESTRIBILLO
-Em  A
-Lucero solito
-D7 G B7
-brote del alma
-Em                F#7
-¿Dónde iremos a parar
-B7                   Em
-si se apaga Balderrama?
-G                 A
-¿Dónde iremos a parar
-B7                   Em
-si se apaga Balderrama?
-`
-},
-
-{
-  titulo: "Chacarera para mi vuelta",
-  ritmo: "Chacarera",
-  tono: "F#m",
-  miTono: "Em",
-  letra: `
-Intro: C#7 F#m
-
-F#m
-Dejé mi tierra cantora
-D
-por conocer otros pagos
-E
-voy andando los caminos
-C#7  F#m
-pero mi alma está en Santiago.
-
-F#m
-Desde entonces vivo solo
-D
-por las calles de la vida
-E
-callada sombra que pasa
-C#7  F#m
-guitarra llena de heridas.
-
-F#m
-Guitarra llena de heridas
-D
-mate amargo mal cebado
-E
-tu llanto dentro del pecho
-C#7         F#m
-me anda llorando, llorando.
-
-ESTRIBILLO
-F#m
-Cuando yo pegue la vuelta
-D
-no sé ni cómo ni cuándo
-E
-tierra madre he de contarte
-C#7  F#m
-lo mucho que te he añorado.
-
-SEGUNDITA
-Intro: F#m C#7
-
-F#m
-De tu distancia a la mía
-D
-hay una cruz de madera
-E
-una nostalgia de canto
-C#7 F#m
-y un bailar de chacarera.
-
-F#m
-Un bailar de chacareras
-D
-bajo este cielo estrellado
-E
-donde comulgan los bombos
-C#7  F#m
-con los vientos y el sachayoj.
-
-F#m
-Y al dormir baja la noche
-D
-sobre la espuma del río
-E
-en la sala de un ochogos
-C#7  F#m
-pa' no morirse de frío.
-
-ESTRIBILLO
-F#m
-Cuando yo pegue la vuelta
-D
-no sé ni cómo ni cuándo
-E
-tierra madre he de contarte
-C#7  F#m
-lo mucho que te he añorado.
-`
-},
-
-{
-  titulo: "La sachapera",
-  ritmo: "Chacarera",
-  tono: "C",
-  miTono: "A",
-  letra: `
-Intro: C G7
-
-   C
-Churita mi buena moza
-         E7      Am
-balanceando la pollera
-   D7                  G
-bailando es la más donosa
-      D7         G
-morenita santiagueña.
-      F          C
-Con la chacarera doble
-         G7         C
-se curan todas las penas.
-
-Intro: C G7
-
-C
-Dulce fruto de mis pagos
-   E7        Am
-criollita sabagastera
-   D7                  G
-boquita de arrope y tuna
-   D7                  G
-juguito de sachapera.
-      F          C
-Con la chacarera doble
-         G7         C
-se curan todas las penas.
-
-Intro: C G7
-
-C
-Da gusto andar por los montes
-E7           Am
-cuando la noche despierta
-   D7                  G
-besando los algarrobos
-   D7                  G
-con su llovizna de estrellas.
-      F          C
-Con la chacarera doble
-         G7         C
-se curan todas las penas.
-
-ESTRIBILLO
-C
-En Santiago del Estero
-E7               Am
-la Salamanca me espera
-   D7                  G
-y el sonko dejarte quiero
-   D7                  G
-para cantarle a mi tierra.
-      F          C
-Con la chacarera doble
-      G7            C
-se curan todas las penas.
-
-SEGUNDA
-Intro: C G7
-
-   C
-Bienhaiga mi buena moza
-         E7  Am
-has encendido una hoguera
-   D7              G
-con el fuego de tus ojos
-   D7              G
-es mi amor leñita seca.
-   F         C
-Con la chacarera doble
-         G7     C
-se curan todas las penas.
-
-Intro: C G7
-
-   C
-Pal' tiempo de la arropiada
-         E7  Am
-hay una luna hechicera
-   D7              G
-que en medio de las vidalas
-      D7     G
-cantando coplas se queda.
-      F      C
-Con la chacarera doble
-      G7        C
-se curan todas las penas.
-
-Intro: C G7
-
-C
-Con harina de algarroba
-         E7  Am
-voy a endulzar las tristezas
-D7              G
-que por andar en amores
-D7              G
-me van siguiendo de cerca.
-   F         C
-Con la chacarera doble
-      G7        C
-se curan todas las penas.
-
-ESTRIBILLO
-   C
-En Santiago del Estero
-E7           Am
-la Salamanca me espera
-   D7              G
-y el sonko dejarte quiero
-   D7              G
-para cantarle a mi tierra.
-      F      C
-Con la chacarera doble
-      G7        C
-se curan todas las penas.
-`
-},
-
-{
-  titulo: "Santiago, chango moreno",
-  ritmo: "Chacarera",
-  tono: "G",
-  miTono: "E",
-  letra: `
-Intro: C G
-
-G
-En cada chacarera,
-C
-yo estoy volviendo al pago.
-Am
-Y soy bombo latiendo,
-D7
-si te pienso Santiago.
-C
-En cada chacarera,
-D7                  G
-estoy volviendo al pago.
-
-Intro: C G
-
-G
-Crespín soy cuando siento,
-C
-Santiago que te nombran.
-Am
-Y el diablo de la Macha,
-D7
-el corazón me ronda.
-C
-Crespín soy cuando siento,
-D7                  G
-Santiago que te nombran.
-
-Intro: C G
-
-G
-Cuando escucho a dos cajas,
-C
-golpear una vidala.
-Am
-Un coyuyo de ausencia,
-D7
-se prende a mi garganta.
-C
-Cuando escucho a dos cajas,
-D7                  G
-golpear una vidala.
-
-ESTRIBILLO
-G
-Santiago del Estero,
-C
-es un chango moreno.
-Am
-Con música en los ojos,
-D7
-y un corazón coplero.
-C
-Santiago del Estero,
-D7                  G
-es un chango moreno.
-
-SEGUNDA
-Intro: C G
-
-G
-Chilalo, piel morena,
-C
-bombisto y vidalero.
-Am
-Cantor de chacareras,
-D7
-¡claro! soy santiagueño.
-C
-Chilalo, piel morena,
-D7                  G
-bombisto y vidalero.
-
-Intro: C G
-
-G
-Lejos del pago añoro,
-C
-las noches santiagueñas.
-Am
-Y ese parral por cielo,
-D7
-con racimo de estrellas.
-C
-Lejos del pago añoro,
-D7                  G
-las noches santiagueñas.
-
-Intro: C G
-
-G
-Andar es mi destino,
-C
-llamen pagos ajenos.
-Am
-Pero a mi santiagueña,
-D7
-Mishkila siempre vuelvo.
-C
-Andar es mi destino,
-D7                  G
-llamen pagos ajenos.
-
-ESTRIBILLO
-G
-Santiago del Estero,
-C
-es un chango moreno.
-Am
-Con música en los ojos,
-D7
-y un corazón coplero.
-C
-Santiago del Estero,
-D7                  G
-es un chango moreno.
-`
-},
-
-{
-  titulo: "Chacarera del chilalo",
-  ritmo: "Chacarera",
-  tono: "C",
-  miTono: "B",
-  letra: `
-Intro: G C
-
-F
-El monte qué lindo está
-cuando hay miel de palo.
-G7       F
-Bajo los garabatos
-G7           C
-lechiguana y chilalos.
-
-Intro: G C
-
-F
-Aromas de tusca en flor
-perfuman la huella
-G7          F
-y el mistol coloreando
-G7                    C
-está de adorno en la tierra.
-
-Intro: G C
-
-F
-Las tunas y el piquillín
-ya están madurando
-G7              F
-y por sobre los cercos
-G7                C
-están las dolcas colgando.
-
-ESTRIBILLO
-F
-Ofreciendo está el cardón
-su flor blanca y pura
-G7              F
-mientras que la ulúa
-G7            C
-ya se abre de madura.
-
-SEGUNDA
-Intro: G C
-
-F
-Por entre el viscacheral
-y pampa taquellus
-G7       F
-florecen quiscaloros
-G7       C
-tuscas y sisaquellus.
-
-Intro: G C
-
-F
-El sachayoj se hace oír
-cuidando los montes
-G7         F
-despiertan salamancas
-G7           C
-en medio los locontes.
-
-Intro: G C
-
-F
-Se entreveran los tum-tum
-de bombos legüeros
-G7            F
-de hachas, de malambos
-G7            C
-y de criollos morteros.
-
-ESTRIBILLO
-F
-El monte qué lindo está
-cuando hay miel de palo.
-G7       F
-Bajo los garabatos
-G7           C
-lechiguana y chilalos.
-`
-},
-
-{
-  titulo: "Gato del festival",
-  ritmo: "Gato",
-  tono: "Em",
-  miTono: "Em",
-  letra: `
-Intro: Em B Em B Em
-
-    Em             Am
-Bailando en el festival
-     B         Em
-como santiagueño
-                    Am
-costumbre del pago es
-      B         Em
-hacerlo sin miedo
-   C            Am
-la moza más linda
-     B          Em
-ansiosa me espera
-
-    Em              B
-Atajate que voy mi amor
-             Em
-con ganas de mudancear
-                   B
-y en el corazón repicar
-                Em
-el alma y enamorar
-
-   Em          C
-Se van arrimando
-  B            Em
-otros bailarines
-
-    Em                 B
-Que comienza mucho a gustar
-                       Em
-porque todos quieren bailar
-                       B
-y la fiesta se agranda más
-                  Em
-con cohetes y palmas
-
-      D               G
-Bailando este gato estoy
-   B          Em
-como santiagueño
-
-SEGUNDA
-Intro: Em B Em B Em
-
-Em             Am
-Una niña del lugar
-B         Em
-asoma su cuerpo
-       Am
-en el escenario
-B           Em
-se arma el revuelo
-C        Am
-todo es alegría
-B        Em
-bajo mi cielo
-
-Em                     B
-Hay un viejo que está machao'
-                        Em
-y que su poncho hace revolear
-                B
-si toma hasta el aclarar
-                   Em
-tirao' va a quedar nomás
-
-Em         C
-La última vuelta
-B             Em
-para el gato alegre
-
-Em          B
-Levantemos polvaredal
-                  Em
-zapateando hasta terminar
-                  B
-la donosa sigan igual
-               Em
-floreando su zarandear
-
-D                   G
-Bailando este gato estoy
-   B          Em
-como santiagueño
-`
-},
-
-{
-  titulo: "Gato de la madrugada",
-  ritmo: "Gato",
-  tono: "Em",
-  miTono: "Em",
-  letra: `
-Intro: Em B7
-
-G                 B7         Em
-Una madrugada que olía a cedrón
-G                    B7       Em
-poleo y albahaca este gato nació.
-Vuelta: G B7 Em
-              B7                     Em
-Cantaban cardenales, calandrias y zorzales
-                 G                B7           Em
-qué lindo que se oía en medio el monte el bandoneón.
-
-   G                   B7       Em
-Me engozaba el alma un dulce violín
-              B7                   Em
-achalay ese bombo, qué lindo ese rasguido,
-                  G          B7            Em
-que se mete en la sangre alegrando el corazón.
-                 G           B7     Em
-Madrugando en mi alma este gato nació.
-
-SEGUNDA
-Intro: Em B7
-
-G                B7      Em
-El sol despacito salió a mosquetear
-G                        B7        Em
-y el coro del monte a la fiesta se unió.
-Vuelta: G B7 Em
-                B7                 Em
-El canto de los gallos salidos como ruego,
-            G             B7         Em
-revuelos de cencerros que venían del corral.
-
-G              B7           Em
-Qué lindo es el monte en su despertar,
-                B7                   Em
-todo ese olor a vida, con su perfume agreste,
-                  G      B7           Em
-que se mete en la sangre alegrando el corazón.
-                 G         B7   Em
-Madrugando en mi alma este gato nació.
-`
-},
-
-{
-  titulo: "Un domingo santiagueño",
-  ritmo: "Chacarera",
-  tono: "A",
-  miTono: "A",
-  letra: `
-A                 D
-Un domingo santiagueño
-                       A
-no es un domingo cualquiera,
-      F#7             B
-hasta el sol viene saliendo
-          E7        A
-con ritmo de chacarera.
-
-A                  D
-Cada cual tiene su dicha
-                      A
-con baile, empanada y vino,
-           F#7   B
-zapatiando en el salitre,
-   E7                    A
-si más caliente es más lindo.
-
-A              D
-Y arriba en la costanera
-                 A
-se ven parrillas humeando,
-   F#7         B
-es hora que el calavera
-      E7          A
-está el incendio apagando.
-
-ESTRIBILLO
-A            D
-Los domingos santiagueños
-                     A
-diosquiera que no se pierdan,
-   F#7               B
-de aquí le mando un suspiro
-  E7        A
-a mi tierra santiagueña.
-
-SEGUNDA
-A                D
-Añoranzas de La Banda,
-                A
-achalitay, qué hermosura,
-      F#7     B
-Apalo con sus hermanos
-         E7 A
-preparan la compostura.
-
-A                  D
-Qué linda noche i pasao
-                A
-pensando de que volvía
-  F#7            B
-a empacharme con zapallo,
-     E7          A
-tuna fresquita y sandía.
-
-A                D
-Comieron toda la noche
-                 A
-vino y pastel de vizcacha
-  F#7           B
-y ahora caminan firme
-            E7 A
-disimulando la macha.
-`
-},
-
+  {
+    "titulo": "Perfume de carnaval",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Bm",
+    "miTono": "Bm",
+    "letra": "Bm              D\nMe voy solo con mi suerte\n         A7         D\nla llevaré en mi recuerdo\nB7              Em\nbajo un añoso algarrobo\nB7              Em\ncortaba el aire un pañuelo\nF#7             G\nbailando una vieja zamba\n             D      F#7 Bm\nyo le entregaba mis sueños.\n\nBm              D\nEl sol quemaba en la tarde\n         A7         D\nsiluetas que parecían\nB7              Em\nfantasmas amarillentos\nB7              Em\nllenos de tierra y de vida\nF#7             G\ny yo rendido a tus ojos\n             D      F#7 Bm\nsintiendo que me querías.\n\nESTRIBILLO\nAm B7           Em\n¡Ay! Perfume de carnaval\n     A7         D\nya nunca la hei de olvidar\n     B7         Em\nsu piel llevaba el aroma\n     B7         Em\nde flor y tierra mojada\nF#7             G\nbellos recuerdos que siempre\n             D F#7 Bm\nlos llevo dentro del alma.\n\nSEGUNDA\nBm                          D\n¡Ay! Tiempos donde han quedado\n            A7              D\ndonde he perdido mis sueños\nB7                          Em\nquién sabe si ella se acuerda\nB7                          Em\nde un viejo mes de febrero\nF#7                      G\ny de aquel baile del campo\n         D      F#7 Bm\ny de mi amor verdadero.\n\nBm           D\nNo quise decirte nada\n         A7                 D\nla amé en silencio esa tarde\nB7           Em\ny sobre sus trenzas negras\nB7           Em\ndejé mis coplas sentidas\nF#7          G\nme fui llevando sus ojos\n         D       F#7 Bm\nun miércoles de cenizas.\n\nESTRIBILLO\nAm B7        Em\n¡Ay! Perfume de carnaval\n     A7      D\nya nunca la hei de olvidar\n     B7      Em\nsu piel llevaba el aroma\n     B7      Em\nde flor y tierra mojada\nF#7          G\nbellos recuerdos que siempre\n         D F#7 Bm\nlos llevo dentro del alma."
+  },
+  {
+    "titulo": "Flor azul",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Am",
+    "miTono": "Am",
+    "letra": "Intro: Dm Am E7 Am (x2)\n\nAm\nQue solo me voy quedando\nDm Am\nmi viejo tunal\nDm Am\noyendo cantar al río\nE7  Am\npara el carnaval.\n\nIntro: Dm Am E7 Am (x2)\n\nAm\nMe acompaña la esperanza\nDm Am\nen la soledad\nDm Am\ncuando silba el huairamuyo\nE7  Am\npor el salitral.\n\nIntro: Dm Am E7 Am (x2)\n\nAm\nÁrbol fuiste bien coposo,\nDm Am\npobre corazón,\nDm Am\nárbol que quedó sin hojas\nE7  Am\nsin nido, ni amor.\n\nESTRIBILLO\nAm\nDile, dile chacarera\nDm Am\na esa flor azul\nDm Am\nque de noche yo la busco\nE7  Am\npor la cruz del sur.\n\nSEGUNDITA\nIntro: Dm Am E7 Am (x2)\n\nAm\nEsa pena enamorada\nDm Am\npena sin cesar\nDm Am\nbuscando volverse copla\nE7  Am\npa' hacerme llorar.\n\nIntro: Dm Am E7 Am (x2)\n\nAm\nCuando recuerdo sus ojos\nDm Am\nde dulce mirar,\nDm Am\nme acomodo con mi perro\nE7  Am\nsolito a pitar.\n\nAm\nAmalaya con la suerte\nDm Am\nque a mí me ha tocao\nDm Am\ncantar por cantar, cantando\nE7  Am\nsin ser escuchao.\n\nESTRIBILLO\nAm\nDile, dile chacarera\nDm Am\na esa flor azul\nDm Am\nque de noche yo la busco\nE7  Am\npor la cruz del sur."
+  },
+  {
+    "titulo": "Entra a mi pago sin golpear",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Dm",
+    "miTono": "Am",
+    "letra": "Intro: A7 Dm (x2) · Dm F A7 Dm (x2)\n\n    Bb                           C              F\nFue mucho mi penar andando lejos del pago\nF       G                           F\nTanto correr pa' llegar a ningún lado\nA7             Dm                A7 Dm\nSi estaba donde nací lo que buscaba por ahí.\n\nIntermedio: Dm F A7 Dm (x2)\n\n    Bb                           C              F\nEs solo la amistad que no se compra ni vende\nF       G                              F\nSolo se da cuando en el pecho se siente\nA              Dm\nNo es algo que se ha de usar\nA7             Dm\ncuando le sirva y nada más.\n\nIntermedio: Dm F A7 Dm (x2)\n\n    Bb                        C              F\nAsí es como se da en la amistad mis paisanos\nF           G                             F\nSus manos son pancacho y mate cebado\nA              Dm\nY la flor de la humildad\nA              Dm\nsuele su rancho perfumar.\n\nESTRIBILLO\n    Bb                              C              F\nLa vida me han prestau y tengo que devolverla\nF           G                             F\nCuando el creador me llame para la entrega\nA              Dm\nQue mis huesos piel y sal\nA              Dm\nabonen de mi suelo natal.\n\nSEGUNDITA\nIntro: A7 Dm (x2) · Dm F A7 Dm (x2)\n\n   Bb                         C             F\nLa luna es un terrón que alumbra con luz prestada\nF           G                            F\nSolo al cantor que canta coplas del alba\nA              Dm\nLe estalla en el corazón\nA              Dm\neso que trepa por su voz.\n\nIntermedio: Dm F A7 Dm (x2)\n\nBb                            C                F\nCantor para cantar si nada dicen sus versos\nF      G                         F\nAy para qué vas a callar al silencio\nA              Dm\nSi ese silencio cantor\nA              Dm\nlleno de duendes en la voz.\n\nIntermedio: Dm F A7 Dm (x2)\n\n   Bb                         C                F\nMi pueblo es un cantor que canta la chacarera\nF           G                               F\nNo ha de cantar lo que muy dentro no sienta\nA              Dm\nCuando lo quiera escuchar\nA              Dm\nentra a mi pago sin golpear.\n\nESTRIBILLO\nBb                                    C           F\nLa vida me han prestau y tengo que devolverla\nF           G                               F\nCuando el creador me llame para la entrega\nA                       Dm\nQue mis huesos piel y sal\nA                       Dm\nabonen de mi suelo natal."
+  },
+  {
+    "titulo": "Carito",
+    "sub": "",
+    "ritmo": "Chamamé",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "   D\nSentado solo en un banco en la ciudad,\n                            Em\ncon tu mirada recordando el litoral,\n       G                        D              B7\ntu suerte quiso estar partida mitad verdad, mitad mentira,\n       Em               A7           D\ncomo esperanza de los pobres prometida.\n\nD\nAndando solo bajo la llovizna gris,\n                                Em\nfingiendo duro que tu vida fue de aquí.\n          G                                    D             B7\n¿Por qué cambiaste un mar de gente por donde gobierna la flor?\n       Em     A7                D D7\nMirá que el río nunca regaló el color.\n\nESTRIBILLO\nG      F#m B7\nCarito, yo soy tu amigo\n   Em A7                 Am7 D7\nMe ofrezco árbol para tu nido\nG      F#m B7\nCarito, suelta tu canto\n   Em                    A7    Am7 D7\nQue el abanico en mi acordeón lo está esperando\n\nSolo de armónica: Em A7 D B7 Em A7 D D7 G A7 D B7 Em A7 D\n\nG            F#m B7\nCarito, suelta tu pena\n       Em     A7                Am7 D7\nSe haga diamante tu lágrima entre mis cuerdas\nG            F#m B7\nCarito, suelta tu piedra\n   Em         A7                D\nPara volar como el zorzal en primavera\n\nSolo de armónica: Em A7 D B7 Em A7 D D7 G A7 D B7 Em A7 D\n\n   D\nEn Buenos Aires los zapatos son modernos,\n                                        Em\npero no lucen como en la plaza de un pueblo.\n       G                                D           B7\nDejá que tu luz chiquitita le hable en secreto a la canción\n          Em              A7            D\npara que te ilumine un poco más el sol.\n\nD\nCualquier semilla cuando es planta quiere ver\n                                Em\nla misma estrella de aquel atardecer,\n       G                        D              B7\nque la salvó del pico agudo refugiándola al oscuro\n       Em               A7           D\nde la gaviota arrasadora de los surcos."
+  },
+  {
+    "titulo": "Al jardín de la república",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Em",
+    "miTono": "Dm",
+    "letra": "Intro: B7 Em B7 Em\n\n        G          D        G\nDesde el norte traigo en el alma\n    D       G D             G\nLa alegre zamba que canto aquí\n    B7             Em\nY que bailen los tucumanos\n    B7             Em\nCon entusiasmo propio de allí\n    B7             Em\nCada cual sigue a su pareja\n    B7             Em\nJoven o viejo de todo vi\n\n        G          D        G\nMedia vuelta y la compañera\nD           G D             G\nForma una rueda para seguir\n    B7             Em\nViene el gaucho le hace un floreo\n    B7             Em\nY un zapateo comienza allí\n    B7             Em\nSigue el gaucho con su floreo\n    B7             Em\nY el zapateo comienza allí\n\nESTRIBILLO\nE7      Am\nPara las otras no\nD7      G\nPa' las del norte sí\n    B7             Em\nPara las tucumanas\n    B7             Em\nMujer galana naranjo en flor\n    B7             Em\nTodo lo que ellas quieran\n    B7             Em\nQue la primera ya terminó\n\nIntro: B7 Em B7 Em\n\n        G          D        G\nNo me olvido, viera compadre\n    D       G D             G\nDe aquellos bailes que hacen allí\n    B7             Em\nTucumanos y tucumanas\n    B7             Em\nTodos se afanan por divertir\n    B7             Em\nY se hace linda esta mala vida\n    B7             Em\nAsí se olvida que hay que morir\n\n        G          D       G\nEmpanadas y vino en jarra\nD G         D          G\nUna guitarra bombo y violín\n    B7             Em\nY unas cuantas mozas bizarras\n    B7             Em\nPa' que la farra pueda seguir\n    B7             Em\nSin que falten esos coleros\n    B7             Em\nViejos cuenteros que hagan reír\n\nESTRIBILLO\nE7      Am\nPara las otras no\nD7      G\nPa' las del norte sí\n    B7             Em\nPara las de Simoca\n    B7             Em\nMis ansias locas de estar allí\n    B7             Em\nPara brindarles mi alma\n    B7             Em\nEn esta zamba que canto aquí"
+  },
+  {
+    "titulo": "Arenosa",
+    "sub": "",
+    "ritmo": "Cueca",
+    "tono": "Bm",
+    "miTono": "Bm",
+    "letra": "Bm F#7 Bm\nArenosa, arenosita\nA7 D\nMi tierra cafayateña\n    G              E\nEl que bebe de su vino\nF#7         Bm\nGana sueño y pierde pena\n    G              E\nEl que bebe de su vino\nF#7         Bm\nGana sueño y pierde pena\n\nBm F#7 Bm\nEl agua de Calchaquí\nA7                 D\nPadre de todas las siembras\n    G                      E\nCuando uno se va y no vuelve\nF#7         Bm\nCanta llorando y se aleja\n    G                      E\nCuando uno se va y no vuelve\nF#7         Bm\nCanta llorando y se aleja\n\nESTRIBILLO\nEm A7\nArena, arenita\nG               D\nArena, tapa mi huella\nBm              E\nPara que en las vendimias\n   F#7          Bm\nMi vida yo vuelva a verla\nBm              E\nPara que en las vendimias\n   F#7          Bm\nMi vida yo vuelva a verla\n\nSEGUNDA\nBm F#7 Bm\nLuna de los medanales\nA7          D\nLunita cafayateña\n    G              E\nLuna de arena morena\n   F#7          Bm\nEn carnavales de ausencia\n     G             E\nLuna de arena morena\n   F#7          Bm\nEn carnavales de ausencia\n\nBm F#7 Bm\nDeja que beba en tu vino\n   A7 D\nsavia cafayateña\n     G             E\nY que me pierda en la cueca\n     F#7                 Bm\nCantando antes que me muera\n        G             E\nY que me pierda en la cueca\nF#7         Bm\nCantando antes que me muera\n\nESTRIBILLO\nEm A7\nArena, arenita\nG               D\nArena, tapa mi huella\nBm                 E\nPara que en las vendimias\n   F#7          Bm\nMi vida yo vuelva a verla\nG               E\nPara que en las vendimias\n   F#7          Bm\nMi vida yo vuelva a verla"
+  },
+  {
+    "titulo": "La simple (Solo pa' bailarla)",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Am",
+    "miTono": "F#m",
+    "letra": "Intro: E7 Am\n\nAm           E7\nEsta es solo pa' bailarla\nE7              Am\nesta simple chacarera\nAm           E7\ncon un poco de tierrita\nE7           Am\nbaila cualquiera\n\nIntro: E7 Am\n\nAm           E7\nTiene sangre emborrachada\nE7              Am\ny una noche que ya es nuestra\nAm           E7\nalcanza para empaparme\nE7           Am\ny matar las penas\n\nIntro: E7 Am\n\nAm           E7\nNo hay final para esta noche\nE7              Am\nmientras haiga chacarera\nAm           E7\ninfinita colección\nE7           Am\npedí la que quieras\n\nESTRIBILLO\nAm           E7\nEsta es solo pa' bailarla\nE7              Am\nesta simple chacarera\nAm           E7\ncon un poco de tierrita\nE7           Am\nbaila cualquiera\n\nSEGUNDA\nInter: E7 Am\n\nAm           E7\nHay para todos los gustos\nE7              Am\nte emocionan, te enamoran\nAm          E7\ny cuando la escuchan lejos\nE7              Am\nmuchos la lloran\n\nIntro: E7 Am\n\nAm          E7\nLa sangre de la guitarra\nE7              Am\ny las manos santiagueñas\nAm          E7\nla combinación perfecta\nE7              Am\nsobre las cuerdas\n\nIntro: E7 Am\n\nAm          E7\nSea simple, sea doble\nE7              Am\nen el corazón retumba\nAm          E7\ncomo si fuera que un bombo\nE7          Am\nal pecho te apunta\n\nESTRIBILLO\nAm          E7\nEsta es solo pa' bailarla\nE7              Am\nesta simple chacarera\nAm          E7\ncon un poco de tierrita\nE7          Am\nbaila cualquiera"
+  },
+  {
+    "titulo": "El olvidado",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Am",
+    "miTono": "Em",
+    "letra": "Intro: Am Dm E7 Am (x2)\n\nAm Dm E7                Am\nSoy el que quedó en medio e' los rancho\nF           B7                      E7\nguacho de fia'o a mate y guiso inventado\nDm  Am                  E7               Am\nhambre y rebelión fueron creciendo en mis manos\n\nAm Dm E7                Am\nde tu palo soy hijo de tu cuero\nF           B7                      E7\nsoy el olvidao en la alcancía del tiempo\nDm      Am              E7               Am\nel que se quedó de pie poniéndole el pecho\n\nIntro: Am Dm E7 Am (x2)\n\nAm Dm E7                Am\nNo quiero de más quiero lo que es mío\nF           B7                      E7\nalmas o trampiao voy a torcerle el destino\nDm  Am                  E7               Am\nlevantate cagón que aquí canta un argentino\n\nAm Dm E7                Am\nflor obrera soy silvestre de espuma\nF           B7                      E7\ncuando el tren se va miro en las vías la luna\nDm      Am              E7               Am\npensando tal vez mi pago encuentre fortuna\n\nIntro: Am Dm E7 Am (x2)\n\nESTRIBILLO\nAm Dm E7                Am\nSoy el olvidao el mismo que un día\nF                           G C\nse puso de pie tragando tierra y saliva\nDm      Am              E7               Am\ncaminó hacia el sol para curar las heridas\n\nAm Dm E7                Am\nMi bofe se hinchó cuando repartieron\nF                           B7               E7\nde mí no se acuerdan dicen que nunca me vieron\nDm      Am              E7               Am\nque no soy de aquí que ya no tengo remedio\n\nESTRIBILLO\nAm Dm E7                Am\nSoy el olvidao el mismo que un día\nF                           G C\nse puso de pie tragando tierra y saliva\nDm      Am              E7               Am\ncaminó hacia el sol para curar las heridas\n\nSEGUNDA\nIntro: Am Dm E7 Am (x2)\n\nAm Dm E7                Am\nUna herida soy buscando el salario\nF                           B7               E7\nmaestro de pie cuidando pichones blancos\nDm      Am              E7               Am\nque madurarán iluminando mi pago\n\nIntro: Am Dm E7 Am (x2)"
+  },
+  {
+    "titulo": "Chacarera de la tía Rosa",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "C",
+    "miTono": "A",
+    "letra": "Intro: D G D G (x2)\n\nC\nAndaba yo por el monte y pasó un carancho zumbando\n   G                              D             G\nY atrás una manga'i lora que lo traían cascoteando\n\nIntro: D G D G (x2)\n\nC\nMe topé con un zorrito y me topé una yarará\n   G                                 D G\nMe he topau con tus ojitos chiquita por qué será\n\nIntro: D G D G (x2)\n\nLaraira laraira larailalalala-la\n\nC\nLo otro día por las casas ha pasao la tía Rosa\nG                                 D G\nAndaba desesperada buscando no sé qué cosa\n\nESTRIBILLO\n   C                                 D\nChacaré chacarerita de los montes sí señor\n      D                    G         D               G\nQue bailen grandes y chicos, plantas y bichos y qué sé yo\n\nSEGUNDA\nIntro: D G D G (x2)\n\nC\nIgual que aquellas catitas los de abajo se han unido\nG                                 D G\nPa' espantar al gato grande cuando saquea los nidos\n\nIntro: D G D G (x2)\n\nC\nChinita arisca del monte ojitos de sachacabra\nG                                 D G\nNo me has dao para trampearte vidita media palabra\n\nIntro: D G D G (x2)\n\nC\nMe acuerdo lo que buscaba la tía Rosa esa vuelta\nG                                 D G\nBuscaba no sé qué flores que la poniban contenta\n\nESTRIBILLO\n   C                                 D\nChacaré chacarerita de los montes sí señor\n      D                  G             D\nQue bailen todos y todas mientras más seamos mucho\nG\nmejor"
+  },
+  {
+    "titulo": "Cachito, campeón de Corrientes",
+    "sub": "",
+    "ritmo": "Chamamé",
+    "tono": "G",
+    "miTono": "E",
+    "letra": "Instrumental acordeón: D G D G · C G · D C G\n\nG\nDesde Corrientes a Buenos Aires un señor lo vino a buscar,\n                                      D\ncuando estacionó su auto vino el barrio a saludar:\nF                C                 G\n¡Chau, Cachito, chau! Vas a ser el campeón,\n   F                           C   G\ndesde aquí te alentaremos por la televisión.\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy.\n\nG\nEn la noche del debut Corrientes 'taba prendido,\n                                      D\ny un solo grito se oyó cuando el correntino entró:\nF                   C                          G\n¡Vamos, Cachito, vamos, debés ser el campeón!\nF                              C      G\nDesde aquí te alentaremos por la televisión.\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy.\n\nInstrumental acordeón: D G D G · C G · D C G\n\nG\nEl correntino saltarín mostraba su inocencia,\n                                      D\ny entre las cuerdas se vio sangrar sus redondas cejas.\nF                   C                          G\n¿Qué pensará mi madre? Ay, ay, sí, ¿qué pensará?\nF                              C      G\n¿Qué pensará mi barrio? Ay, ay, sí, ¿qué pensará?\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy.\n\nG\n¿Qué me estará pasando, que no lo puedo parar?\n                    D\nEste me está matando de verdad...\nF                   C                          G\n¿Cómo estará mi madre? Ay, ay, sí, ¿cómo estará?\nF                              C      G\n¿Cómo estará mi pueblo? Ay, ay, sí, ¿cómo estará?\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy.\n\nInstrumental acordeón: D G D G · C G · D C G\n\nG\nLlora Corrientes, llora la derrota de su campeón,\n                                              D\nel jueves llega Cachito en el micro de las dos...\nF               C                 G\nY ese señor del auto no aparece por Corrientes\n   F                           C  G\nporque dice que es suficiente el dinero que ganó,\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy.\n\nF               C                 G\nY ese señor del auto no aparece por Corrientes\nF               C                 G\nporque dice que es suficiente el dinero que ganó.\n   D C G\nOy-oy-oy, oy-oy-oy, oy-oy-oy."
+  },
+  {
+    "titulo": "Luna tucumana",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Dm",
+    "miTono": "Dm",
+    "letra": "Intro: Gm Dm A7 Dm A7 Dm\n\n    A7      Dm\nYo no le canto a la luna\n    A7         Dm\nporque alumbra nada más\nGm      Dm\nle canto porque ella sabe\nA7      Dm\nde mi largo caminar.\nGm      Dm\nle canto porque ella sabe\nA7      Dm\nde mi largo caminar.\n\n    A7      Dm\nAy lunita tucumana\nA7          Dm   D7\ntamborcito calchaquí\nGm      Dm\ncompañera de los gauchos\nA7      Dm\nen la senda del Tafí.\nGm      Dm\ncompañera de los gauchos\nA7      Dm\nen la senda del Tafí.\n\nESTRIBILLO\nC7      F\nPerdido en las cerrazones\n    C7                 F       D7\nquién sabe vidita por dónde andaré\nGm      Dm\nmas cuando salga la luna\nA7 Dm\ncantaré, cantaré\nGm      Dm\na mi Tucumán querido\nA7      Dm\ncantaré, cantaré, cantaré.\n\nSEGUNDA\nIntro: Gm Dm A7 Dm A7 Dm\n\n    A7      Dm\nCon esperanza o con pena\n    A7 Dm\nen los campos de Acheral\nGm          Dm\nyo he visto a la luna buena\nA7      Dm\nbesando el cañaveral.\nGm      Dm\nyo he visto a la luna buena\nA7      Dm\nbesando el cañaveral.\n\n    A7            Dm\nEn algo nos parecemos\n    A7            Dm\nluna de la soledad\nGm      Dm\nyo voy andando y cantando\n    A7            Dm\nque es mi modo de alumbrar.\nGm      Dm\nyo voy andando y cantando\n    A7            Dm\nque es mi modo de alumbrar.\n\nESTRIBILLO\nC7      F\nPerdido en las cerrazones\n    C7                 F       D7\nquién sabe vidita por dónde andaré\nGm      Dm\nmas cuando salga la luna\nA7 Dm\ncantaré, cantaré\nGm      Dm\na mi Tucumán querido\nA7      Dm\ncantaré, cantaré, cantaré."
+  },
+  {
+    "titulo": "Luna cautiva",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "D                       A7\nDe nuevo estoy de vuelta,\n                          D\ndespués de larga ausencia;\n                    G\nigual que la calandria\n     Gm                 D\nque azota el vendaval.\n                    A7\nY traigo mil canciones\n                 D\ncomo leñita seca:\n                 Em\nrecuerdo de fogones\n       A7              D\nque invitan a matear.\n\n             A7\nY divisé tu rancho\n             D\na orillas del camino;\n             G\nadonde los jazmines\n   Gm        D\ntejieron un altar.\n             A7\nAl pie del calicanto,\n                    D\nla luna cuando pasa\n             Em\npeinó mi serenata\n     A7              D\nla cresta del sauzal.\n\nESTRIBILLO\n                       F#\nTu amor es una estrella\n                       Bm\ncon cuerdas de guitarra:\n                        A7\nuna luz que me alumbra\n             D\nen mi oscuridad.\n                 A7\nAcércate a la reja;\n                           D\nsos la dueña de mi alma;\n                 Em\nsos mi luna cautiva\n         A7             D\nque me besa y se va.\n(bis)\n\nSEGUNDA\n                     A7\nEscucha que mis grillos\n                        D\nestán enamorados;\n            G\nque llora mi guitarra,\nGm          D\nsollozo del sauzal;\n            A7\nel tintinear de espuelas\n         D\ndel río allá en el vado\n         Em\ny una noche serena,\n     A7              D\nprendida en mi cantar.\n\n                     A7\nDe nuevo estoy de vuelta;\n                        D\nmi tropa está en la huella:\n            G\narrieros musiqueros\nGm          D\nme ayudan a llegar.\n            A7\nTuve que hacer un alto\n         D\npor un toro mañero,\n         Em\nallá en el calicanto,\n     A7              D\na orillas del sauzal.\n\nESTRIBILLO\n                  F#\nTu amor es una estrella\n                     Bm\ncon cuerdas de guitarra:\n                     A7\nuna luz que me alumbra\n         D\nen mi oscuridad.\n         A7\nAcércate a la reja;\n                        D\nsos la dueña de mi alma;\n            Em\nsos mi luna cautiva\n     A7              D\nque me besa y se va.\n(bis)"
+  },
+  {
+    "titulo": "Agitando pañuelos",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "F#m",
+    "miTono": "F#m",
+    "letra": "Intro: F#m F#7 Bm E7 A C#7 · F#m E D C#7 Bm A C#7 F#m\n\nF#m F#7 Bm      E7                         A                       C#7\nTe vi, no olvidaré... un carnaval, guitarra, bombo y violín\nF#m E D     C#7 Bm              A C#7 F#m\nagitando pañuelos te vi cadencia al bailar, airoso el perfil.\nF#m E D         C#7 Bm          A C#7 F#m\nagitando pañuelos te vi cadencia al bailar, airoso el perfil.\n\nF#m F#7     Bm              E7                                  A       C#7\nMe fui diciendo adiós y en ese adiós quedó enredado un querer.\nF#m E D         C#7 Bm A                   C#7                       F#m\nAgitando pañuelos me fui ¡Qué lindo añorar tu zamba de ayer!...\nF#m E D         C#7 Bm A                   C#7                       F#m\nAgitando pañuelos me fui ¡Qué lindo añorar tu zamba de ayer!...\n\nESTRIBILLO\nF#m F#7 Bm                 E7                                A       C#7\nYo me iré, tú vendrás... Yo te llevaré, mi rancho se alegrará.\nF#m E D         C#7 Bm A C#7 F#m\nAgitando pañuelos me iré y en mí vivirá aquel carnaval.\nF#m E D         C#7 Bm             A                         C#7 F#m\nAgitando pañuelos me iré cantando esta zamba repiqueteadita.\n\nSEGUNDA\nIntro: F#m F#7 Bm E7 A C#7 · F#m E D C#7 Bm A C#7 F#m\n\nF#m F#7 Bm                 E7                                A          C#7\nVolví y te encontré... toda mi voz le dio a la copla un cantar.\nF#m E D         C#7 Bm A              C#7                          F#m\nAgitando pañuelos volví, sintiendo también mi pecho agitar.\nF#m E D         C#7 Bm          A     C#7 F#m\nAgitando pañuelos volví, sintiendo también mi pecho agitar.\n\nF#m F#7 Bm          E7                        A                         C#7\nBailé hasta el final... engualichao, bailé hasta el amanecer.\nF#m E D         C#7 Bm A              C#7                       F#m\nAgitando pañuelos bailé. ¡Qué lindo bailar las zambas de ayer!\nF#m E D         C#7 Bm A              C#7                       F#m\nAgitando pañuelos bailé. ¡Qué lindo bailar las zambas de ayer!\n\nESTRIBILLO\nF#m F#7 Bm                 E7                                A       C#7\nYo me iré, tú vendrás... Yo te llevaré, mi rancho se alegrará.\nF#m E D         C#7 Bm A C#7 F#m\nAgitando pañuelos me iré y en mí vivirá aquel carnaval.\nF#m E D         C#7 Bm             A                         C#7 F#m\nAgitando pañuelos me iré cantando esta zamba repiqueteadita."
+  },
+  {
+    "titulo": "Desde el puente carretero",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "Intro con melodía de violín: G G D G (x2)\n\nG7       C\nSi pasás por mi provincia\n         G\ncon tu familia viajero\n         D\nverás qué lindo es el río\n         G\ndesde el Puente Carretero.\n\nMelodía violín: G G D G (x2)\n\nG7       C\nEs cuna de mil recuerdos\n         G\nde amores y de nostalgias\n         D\ncorazón entrelazado\n         G\nentre Santiago y La Banda.\n\nMelodía violín: G G D G (x2)\n\nG7       C\nSerá el Puente Carretero\n         G\nque va cortando caminos\n         D\npara llegar a los brazos\n         G\ndonde me espera un cariño.\n\nESTRIBILLO\nG7       C\nEncontrarás en mi tierra\n         G\ncantores de salamanca\n         D\npara que nunca te olvides\n         G\naromas a Santiago manta.\n\nSEGUNDA\nG7     C\nPor nada olvides viajero\n         G\nlo que sienten mis paisanos\n         D\nseguro te han de querer\n         G\ncomo se quiere a un hermano.\n\nMelodía violín: G G D G (x2)\n\nG7  C\nY cuando llega la noche\n    G\nte pasás mirando el río\n    D\nseguro que algún dorado\n    G\nse besa con el rocío.\n\nMelodía violín: G G D G (x2)\n\nG7  C\nCoplitas que van naciendo\n    G\nde mi corazón travieso\n    D\nme hacen cosquillas en el alma\n    G\ncuando se agranda el silencio.\n\nESTRIBILLO\nG7  C\nEncontrarás en mi tierra\n       G\ncantores de salamanca\n       D\npara que nunca te olvides\n       G\naromas a Santiago manta."
+  },
+  {
+    "titulo": "Campo afuera",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Em",
+    "miTono": "Em",
+    "letra": "Intro: B7 Em B7 Em B7 Em B7 Em\n\nEm     C F#7                 B7\nHace tiempo y buscando por ahí una chacarera\nAm D7 G                 C\nallá en los montes que hay en mi pago\nB7 Em\ncampo afuera.\n\n       B7 Em                         B7\nCampo de la rudita monte adentro'e Tulumba\n       Em               Am D7 G C\nla he de encontrar linda su bata de percal\n   B7            Em\nbaila Doña Dominga la chacarera.\n\nEm             C F#7             B7\nAbajito de un tala la vi por ser montaraza\nAm D7 G C\ny unos tizones de leña mansa\nB7 Em\nla aromaban.\n\n       B7 Em                 B7\nLa aromaban con su olor unos gajos de tala\n       Em            Am D7               G C\nque supo cortar mi amigo Don Vivas al caer\n   B7            Em\nel invierno pasado para su corral.\n\nEm             C F#7             B7\nY en la tierrita suelta al barrer de las alpargatas\nAm     D7 G C\ndentro'e los montes subió la luna\nB7 Em\npa' alumbrarla.\n\nESTRIBILLO\nD      Em            D       Em\nComo nube en el aire quedó el polvaderal\nAm D7 G C\nojito'i tala flecos de luna\nB7 Em\nla chacarera.\n\nSEGUNDA\nEm               C           F#7      B7\nCon su bata de puro percal va Doña Dominga\nAm D7 G C\ntodas las flores que hay en el monte\nB7 Em\nse la envidian.\n\n       B7 Em                 B7\nSe la envidian porque no hay un color más hermoso\n       Em          Am D7 G                 C\nque el de su percal, ni moza que sepa regalar\n   B7                        Em\nel donaire que tiene su buen zarandear.\n\nEm              C F#7            B7\nY las niñas quisieran bailar como lo hace ella\nAm D7 G C\nla trenza al viento y una manito en\nB7 Em\nla cadera.\n\n       B7 Em                         B7\nSu cadera es un vaivén parecido al del sauce\n       Em Am                 D7 G C\ny al mimbre también, esa es mi abuela se saben decir\n   B7            Em\nlos changos del monte cuantito la ven.\n\nEm              C F#7            B7\nSi a los sesenta la baila así lo que ha sido en antes\nAm D7 G C\nuna corzuela lujosa de ágil\nB7 Em\ndeje nomás.\n\nESTRIBILLO\nD           Em       D           Em\nComo nube en el aire quedó el polvaderal\nAm D7 G C\nojito'i tala flecos de luna\nB7 Em\nla chacarera."
+  },
+  {
+    "titulo": "Zamba para un bohemio guitarrero",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Am",
+    "miTono": "F#m",
+    "letra": "Am            Dm\nOvillado por el vino\nG7            C\ntu canto eriza la noche.\nE                 C\nY al escuadrón guitarrero tu voz\nA7               Dm\ncon el lucero lo esconde.\nE                 F\nY al escuadrón guitarrero tu voz\n    E            Am\ncon el lucero lo esconde.\n\nAm            Dm\nGuitarrero enamorado\nG7            C\nabrazao con la pobreza\nE                 C\nmira del cielo llorando el ayer\nA7               Dm\nlas estrellas con tristeza.\nE                 F\nmira del cielo llorando el ayer\n    E            Am\nlas estrellas con tristeza.\n\nESTRIBILLO\nG7                C\nSolito como la urpila\n       C7                 F\nCoquito Cáceres canta\nE                                F\ncanta pechando las penas su voz\n           E                 Am\nde su bohemia atormentada.\nE                                F\ncanta pechando las penas su voz\n           E                 Am\nde su bohemia atormentada.\n\nINSTRUMENTAL ZAMBA\n\nSEGUNDA\nAm                Dm\nTu canto beben las calles\n       G7              C\nde mi pueblo santiagueño\nE                 C\ncuando el silencio se hace soledad\nA7               Dm\ny la noche ata el sueño.\nE                            F\ncuando el silencio se hace soledad\n    E                Am\ny la noche ata el sueño.\n\nAm           Dm\nMadurando carnavales\n    G7                 C\ntu guitarra moja el alba\nE            C\ny en el remanso de tu corazón\nA7           Dm\nuna chacarera baila.\nE            F\ny en el remanso de tu corazón\n    E        Am\nuna chacarera baila.\n\nESTRIBILLO\nG7           C\nSolito como la urpila\n        C7                F\nCoquito Cáceres canta\nE                                F\ncanta pechando las penas su voz\n        E                    Am\nde su bohemia atormentada.\nE                                F\ncanta pechando las penas su voz\n        E                    Am\nde su bohemia atormentada."
+  },
+  {
+    "titulo": "Aquel tiempo de mi infancia",
+    "sub": "",
+    "ritmo": "Escondido",
+    "tono": "Dm",
+    "miTono": "Dm",
+    "letra": "Intro: Dm Gm A7 Dm (x2)\n\nDm              Gm            A7          Dm\nQuiero volver aquel tiempo como quien mira hacia adentro\nBis: Dm Gm A7 Dm\nDm              Gm            A7          Dm\naquel tiempo de mi infancia de soles y de recuerdos\nBis: Dm Gm A7 Dm\n\n    D7      Gm                 C           F/C\nachalay qué linda vida volver a andar las distancias\n    Dm/C        Dm/Bb             A7               Dm\ncaminar las calles viejas, sentir sus nuevas fragancias\nDm          Gm                 A7                  Dm\nel viejo tren de mi pueblo es la esperanza que andaba\nBis: Dm Gm A7 Dm\n\n        D7      Gm                C             F\nyo era humito de mi gente, humito que se quemaba\n    Dm/C Dm/Bb                    A7            Dm\ncomo brasita en el fuego, como cigarrito en chala\n    Dm      Gm          A7         Dm\ny de soles y de lunas solito me fui criando\nBis: Dm Gm A7 Dm (se acaba)\n\n    D7          Gm          C                 F\nentre medio los cantores, florecido dentro el alma\n    Dm/C Dm/Bb              A7                  Dm\nprimavera que llegaban en capullos y flores blancas\n\nSEGUNDA\n    Dm      Gm              A7                  Dm\nSoy el fruto de la vida de dos ramas que se unieron\nBis: Dm Gm A7 Dm\n    Dm          Gm                   A7             Dm\nde dos ramas que a la tierra le dieron sus frutos nuevos\nBis: Dm Gm A7 Dm\n\n        D7      Gm             C                F\ny en el beso de mi madre subí a cabalgar mi sueño\n    Dm/C Dm/Bb                    A7            Dm\nen un mundo de ilusiones de música y canto lleno\n    Dm          Gm                   A7         Dm\nquise volverme en la noche soy tucu tucu y cigarra\nBis: Dm Gm A7 Dm\n\n    D7      Gm              C                F\nun corazón de vidala quise ser parche de caja\n    Dm/C Dm/Bb                 A7               Dm\npara que alegre mis penas en días o noches largas\n    Dm      Gm          A7         Dm\ny de soles y de lunas solito me fui criando\nBis: Dm Gm A7 Dm\n\n    D7          Gm                   C              F\nSantiago vuelvo a tu lado, quiero secar hoy mi llanto\n    Dm/C        Dm/Bb             A7                Dm\ndame la magia y la suerte, quiero ser de nuevo chango."
+  },
+  {
+    "titulo": "Dejame que me vaya",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Am",
+    "miTono": "F#m",
+    "letra": "Intro: Am Am Dm E7 Am\n\nAm\nAunque me duela el alma\nDm\ny se me quiebre el pecho\nDm\ndejame que me vaya\nAm\na olvidarme tus besos\nF\ndejame que me vaya\nDm E7  Am\na olvidarme tus besos.\n\nAm\nA dónde iré no importa\nDm\nno intentes detenerme\nDm\ntotal sabés de sobra\nAm\nque en vano fue quererte.\nF\ntotal sabés de sobra\nDm E7  Am\nque en vano fue quererte.\n\nAm\nNo creo en tus promesas\nDm\nno me hagas juramentos\nDm\nni bien tu voz lo suelta\nAm\nya se los lleva el viento.\nF\nni bien tu voz lo suelta\nDm E7  Am\nya se los lleva el viento.\n\nESTRIBILLO\nAm\nSiempre en el corazón\nDm\nguardo una chacarera\nDm\ndejame que me vaya\nAm\ny que con ella muera.\nF\ndejame que me vaya\nDm E7  Am\ny que con ella muera.\n\nSEGUNDA\nAm\nAunque me duela el alma\nDm\ntan solo pienso en irme\nDm\nno quiero estar mañana\nAm\ncrucificado y triste.\nF\nno quiero estar mañana\nDm E7  Am\ncrucificado y triste.\n\nAm\nDel hueco de tus manos\nDm\nblancas como el azúcar\nDm\nbebí los desengaños\nAm\nprobé las amarguras.\nF\nbebí los desengaños\nDm E7  Am\nprobé las amarguras.\n\nAm\nLa miel que vos me diste\nDm\nno estaba hecha de flores\nDm\nde algún rencor hiciste\nAm\nla miel de tus amores\nF\nde algún rencor hiciste\nDm E7  Am\nla miel de tus amores.\n\nESTRIBILLO\nAm\nSiempre en el corazón\nDm\nguardo una chacarera\nDm\ndejame que me vaya\nAm\ny que con ella muera.\nF\ndejame que me vaya\nDm E7  Am\ny que con ella muera."
+  },
+  {
+    "titulo": "Alma de rezabaile",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "Em",
+    "miTono": "Dm",
+    "letra": "Intro: G A G A\n\nG A G A\nEl baile ya ha comenzado\nG A G A\nallá por Santiago del Estero\nB7          Em\nretumba toda la selva\nB7          Em\nel repicar de un bombo legüero.\n\nG A G A\nDe fiesta toda la noche\nG A G A\nel dulce brillo de las estrellas\nB7          Em\nbailaba la Telesita\nB7          Em\nque era la danza, que era la reina.\n\nG A G A\nNochecitas santiagueñas\nG A G A\nardientes, puras noches de plata\nB7          Em\nla luna sobre del monte\nB7          Em\nen luz brillante se desparrama.\n\nESTRIBILLO\nG A G A\nQue baile la Telesita\nG A G A\ndulce y fragante como las flores\nB7          Em\ngritaba la paisanada\nB7          Em\nemborrachada de amores.\n\nSEGUNDA\nInter: G A G A\n\nG A G A\nQué busca la pobrecita\nG A G A\ntal vez la danza le dé un consuelo\nB7          Em\ntu pollera remolino\nB7          Em\ntus pies descalzos, trompo de fuego.\n\nG A G A\nTelesita, Telesita\nG A G A\nte has vuelto lluvia, te has vuelto luna,\nB7          Em\nte has vuelto flor de los campos\nB7          Em\nte has vuelto brisa que me perfuma.\n\nG A G A\nHan pasado muchos años\nG A G A\npero tu pueblo nunca te olvida\nB7          Em\nbailando en los rezabailes\nB7          Em\npara que tu alma siga encendida\n\nESTRIBILLO\nG A G A\nQue baile la Telesita\nG A G A\ndulce y fragante como las flores\nB7          Em\ngritaba la paisanada\nB7          Em\nemborrachada de amores."
+  },
+  {
+    "titulo": "Zamba de amor en vuelo",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Am",
+    "miTono": "Am",
+    "letra": "Intro: Dm Am E7 Am A7 · Dm Am E7 Am E7\n\nAm\nComo un tizón encendido\nDm\nardiendo dentro mi sangre\nG7\ntu sombra viene conmigo\nC          A7\ny no la puedo arrancar.\n   Dm                Am\nTe llevo por los caminos\n                        E7\ncomo un abrojo prendido,\n       Am A7\nprendido a mi caminar.\nDm     Am\nTe llevo por los caminos\nG F                     E7\ncomo un abrojo prendido,\n           Am\nprendido a mi guitarrear.\n\nAm\nPor esas ramas del viento\nDm\nveo anunciado tu pelo\nG7\ny en los alambres del tiempo\nC          A7\njirones de soledad.\nDm         Am\nSe deshilacha el recuerdo\n           E7\nsabiendo que estás muy lejos\n       Am A7\ny que ya no volverás.\nDm     Am\nSe deshilacha el recuerdo\nG F                     E7\nsabiendo que estás muy lejos\n                        Am\nde aquella nuestra verdad.\n\nESTRIBILLO\nG7     C A7 Dm\nEstremecidos de cielo\n       Am A7 Dm\nyo vi tus ojos llorar.\n       Am\nLa noche pide guitarra\n       E7\nla zamba busca el olvido\n       Am A7 Dm\ny yo te quiero cantar.\n                   Am\nLa noche pide guitarra\n   G F E7\nla zamba busca el camino\n               Am\nyo no te puedo olvidar.\n\nSEGUNDA\nIntro: Dm Am E7 Am A7 · Dm Am E7 Am E7\n\nAm\nComo un sutil alfarero\nDm\nte fui tallando en mis sueños\nG7\na golpe de greda y fuego\nC              A7\na fuerza de tanto amar.\nDm             Am\nY en el telar de un coplero\n               E7\nte dibujé verso a verso\n         Am A7\npara no perderte más.\nDm             Am\nY en el telar de un coplero\nG F            E7\nte dibujé verso a verso\n               Am A7\npara besarte al cantar.\n\nAm\nAquella luna perdida\nDm\ncomo un capullo en el cielo\nG7\nse me hace que es tu pañuelo\nC              A7\nque en una zamba se va.\nDm             Am\nY en el temblor del lucero\n               E7\ncomo siguiendo tu vuelo\n         Am A7\nmis pensamientos se van.\nDm             Am\nY en el temblor del lucero\n   G F         E7\ncomo siguiendo tu vuelo\n         Am\nmi amor, mi amor te sale a buscar.\n\nESTRIBILLO\nG7     C A7 Dm\nEstremecidos de cielo\n       Am A7 Dm\nyo vi tus ojos llorar.\n       Am\nLa noche pide guitarra\n       E7\nla zamba busca el olvido\n       Am A7 Dm\ny yo te quiero cantar.\n                   Am\nLa noche pide guitarra\n   G F E7\nla zamba busca el camino\n               Am\nyo no te puedo olvidar."
+  },
+  {
+    "titulo": "Balderrama",
+    "sub": "",
+    "ritmo": "Zamba",
+    "tono": "Em",
+    "miTono": "Am",
+    "letra": "Em             D\nOrillitas del canal\nD7                   G B7\ncuando llega la mañana\nEm                F#7\nsale cantando la noche\nB7                Em\ndesde lo del Balderrama\nG                    A\nsale cantando la noche\nB7                Em\ndesde lo del Balderrama\n\nEm             D\nAdentro puro temblar\nD7                   G B7\nel bombo con la baguala\nEm                F#7\ny se alborota quemado\nB7                Em\ndele chispear la guitarra\nG                    A\ny se alborota quemado\nB7                Em\ndele chispear la guitarra\n\nESTRIBILLO\nEm     A\nLucero solito\nD7 G B7\nbrote del alma\nEm                F#7\n¿Dónde iremos a parar\nB7                   Em\nsi se apaga Balderrama?\nG                 A\n¿Dónde iremos a parar\nB7                   Em\nsi se apaga Balderrama?\n\nSEGUNDA\nIntro: Em A G A G B7 Em\n\nEm             D\nSi uno se pone a cantar\nD7                   G B7\nun cochero lo acompaña\nEm                F#7\ny en cada vaso de vino\nB7                Em\ntiembla el lucero del alba\nG                    A\ny en cada vaso de vino\nB7                Em\ntiembla el lucero del alba\n\nEm             D\nZamba del amanecer\nD7                   G B7\narrullo de Balderrama\nEm                F#7\nllora por la medianoche\nB7                Em\ncanta por la madrugada\nG                    A\nllora por la medianoche\nB7                Em\ncanta por la madrugada\n\nESTRIBILLO\nEm  A\nLucero solito\nD7 G B7\nbrote del alma\nEm                F#7\n¿Dónde iremos a parar\nB7                   Em\nsi se apaga Balderrama?\nG                 A\n¿Dónde iremos a parar\nB7                   Em\nsi se apaga Balderrama?"
+  },
+  {
+    "titulo": "Chacarera para mi vuelta",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "F#m",
+    "miTono": "Em",
+    "letra": "Intro: C#7 F#m\n\nF#m\nDejé mi tierra cantora\nD\npor conocer otros pagos\nE\nvoy andando los caminos\nC#7  F#m\npero mi alma está en Santiago.\n\nF#m\nDesde entonces vivo solo\nD\npor las calles de la vida\nE\ncallada sombra que pasa\nC#7  F#m\nguitarra llena de heridas.\n\nF#m\nGuitarra llena de heridas\nD\nmate amargo mal cebado\nE\ntu llanto dentro del pecho\nC#7         F#m\nme anda llorando, llorando.\n\nESTRIBILLO\nF#m\nCuando yo pegue la vuelta\nD\nno sé ni cómo ni cuándo\nE\ntierra madre he de contarte\nC#7  F#m\nlo mucho que te he añorado.\n\nSEGUNDITA\nIntro: F#m C#7\n\nF#m\nDe tu distancia a la mía\nD\nhay una cruz de madera\nE\nuna nostalgia de canto\nC#7 F#m\ny un bailar de chacarera.\n\nF#m\nUn bailar de chacareras\nD\nbajo este cielo estrellado\nE\ndonde comulgan los bombos\nC#7  F#m\ncon los vientos y el sachayoj.\n\nF#m\nY al dormir baja la noche\nD\nsobre la espuma del río\nE\nen la sala de un ochogos\nC#7  F#m\npa' no morirse de frío.\n\nESTRIBILLO\nF#m\nCuando yo pegue la vuelta\nD\nno sé ni cómo ni cuándo\nE\ntierra madre he de contarte\nC#7  F#m\nlo mucho que te he añorado."
+  },
+  {
+    "titulo": "La sachapera",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "C",
+    "miTono": "A",
+    "letra": "Intro: C G7\n\n   C\nChurita mi buena moza\n         E7      Am\nbalanceando la pollera\n   D7                  G\nbailando es la más donosa\n      D7         G\nmorenita santiagueña.\n      F          C\nCon la chacarera doble\n         G7         C\nse curan todas las penas.\n\nIntro: C G7\n\nC\nDulce fruto de mis pagos\n   E7        Am\ncriollita sabagastera\n   D7                  G\nboquita de arrope y tuna\n   D7                  G\njuguito de sachapera.\n      F          C\nCon la chacarera doble\n         G7         C\nse curan todas las penas.\n\nIntro: C G7\n\nC\nDa gusto andar por los montes\nE7           Am\ncuando la noche despierta\n   D7                  G\nbesando los algarrobos\n   D7                  G\ncon su llovizna de estrellas.\n      F          C\nCon la chacarera doble\n         G7         C\nse curan todas las penas.\n\nESTRIBILLO\nC\nEn Santiago del Estero\nE7               Am\nla Salamanca me espera\n   D7                  G\ny el sonko dejarte quiero\n   D7                  G\npara cantarle a mi tierra.\n      F          C\nCon la chacarera doble\n      G7            C\nse curan todas las penas.\n\nSEGUNDA\nIntro: C G7\n\n   C\nBienhaiga mi buena moza\n         E7  Am\nhas encendido una hoguera\n   D7              G\ncon el fuego de tus ojos\n   D7              G\nes mi amor leñita seca.\n   F         C\nCon la chacarera doble\n         G7     C\nse curan todas las penas.\n\nIntro: C G7\n\n   C\nPal' tiempo de la arropiada\n         E7  Am\nhay una luna hechicera\n   D7              G\nque en medio de las vidalas\n      D7     G\ncantando coplas se queda.\n      F      C\nCon la chacarera doble\n      G7        C\nse curan todas las penas.\n\nIntro: C G7\n\nC\nCon harina de algarroba\n         E7  Am\nvoy a endulzar las tristezas\nD7              G\nque por andar en amores\nD7              G\nme van siguiendo de cerca.\n   F         C\nCon la chacarera doble\n      G7        C\nse curan todas las penas.\n\nESTRIBILLO\n   C\nEn Santiago del Estero\nE7           Am\nla Salamanca me espera\n   D7              G\ny el sonko dejarte quiero\n   D7              G\npara cantarle a mi tierra.\n      F      C\nCon la chacarera doble\n      G7        C\nse curan todas las penas."
+  },
+  {
+    "titulo": "Santiago, chango moreno",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "G",
+    "miTono": "E",
+    "letra": "Intro: C G\n\nG\nEn cada chacarera,\nC\nyo estoy volviendo al pago.\nAm\nY soy bombo latiendo,\nD7\nsi te pienso Santiago.\nC\nEn cada chacarera,\nD7                  G\nestoy volviendo al pago.\n\nIntro: C G\n\nG\nCrespín soy cuando siento,\nC\nSantiago que te nombran.\nAm\nY el diablo de la Macha,\nD7\nel corazón me ronda.\nC\nCrespín soy cuando siento,\nD7                  G\nSantiago que te nombran.\n\nIntro: C G\n\nG\nCuando escucho a dos cajas,\nC\ngolpear una vidala.\nAm\nUn coyuyo de ausencia,\nD7\nse prende a mi garganta.\nC\nCuando escucho a dos cajas,\nD7                  G\ngolpear una vidala.\n\nESTRIBILLO\nG\nSantiago del Estero,\nC\nes un chango moreno.\nAm\nCon música en los ojos,\nD7\ny un corazón coplero.\nC\nSantiago del Estero,\nD7                  G\nes un chango moreno.\n\nSEGUNDA\nIntro: C G\n\nG\nChilalo, piel morena,\nC\nbombisto y vidalero.\nAm\nCantor de chacareras,\nD7\n¡claro! soy santiagueño.\nC\nChilalo, piel morena,\nD7                  G\nbombisto y vidalero.\n\nIntro: C G\n\nG\nLejos del pago añoro,\nC\nlas noches santiagueñas.\nAm\nY ese parral por cielo,\nD7\ncon racimo de estrellas.\nC\nLejos del pago añoro,\nD7                  G\nlas noches santiagueñas.\n\nIntro: C G\n\nG\nAndar es mi destino,\nC\nllamen pagos ajenos.\nAm\nPero a mi santiagueña,\nD7\nMishkila siempre vuelvo.\nC\nAndar es mi destino,\nD7                  G\nllamen pagos ajenos.\n\nESTRIBILLO\nG\nSantiago del Estero,\nC\nes un chango moreno.\nAm\nCon música en los ojos,\nD7\ny un corazón coplero.\nC\nSantiago del Estero,\nD7                  G\nes un chango moreno."
+  },
+  {
+    "titulo": "Chacarera del chilalo",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "C",
+    "miTono": "B",
+    "letra": "Intro: G C\n\nF\nEl monte qué lindo está\ncuando hay miel de palo.\nG7       F\nBajo los garabatos\nG7           C\nlechiguana y chilalos.\n\nIntro: G C\n\nF\nAromas de tusca en flor\nperfuman la huella\nG7          F\ny el mistol coloreando\nG7                    C\nestá de adorno en la tierra.\n\nIntro: G C\n\nF\nLas tunas y el piquillín\nya están madurando\nG7              F\ny por sobre los cercos\nG7                C\nestán las dolcas colgando.\n\nESTRIBILLO\nF\nOfreciendo está el cardón\nsu flor blanca y pura\nG7              F\nmientras que la ulúa\nG7            C\nya se abre de madura.\n\nSEGUNDA\nIntro: G C\n\nF\nPor entre el viscacheral\ny pampa taquellus\nG7       F\nflorecen quiscaloros\nG7       C\ntuscas y sisaquellus.\n\nIntro: G C\n\nF\nEl sachayoj se hace oír\ncuidando los montes\nG7         F\ndespiertan salamancas\nG7           C\nen medio los locontes.\n\nIntro: G C\n\nF\nSe entreveran los tum-tum\nde bombos legüeros\nG7            F\nde hachas, de malambos\nG7            C\ny de criollos morteros.\n\nESTRIBILLO\nF\nEl monte qué lindo está\ncuando hay miel de palo.\nG7       F\nBajo los garabatos\nG7           C\nlechiguana y chilalos."
+  },
+  {
+    "titulo": "Gato del festival",
+    "sub": "",
+    "ritmo": "Gato",
+    "tono": "Em",
+    "miTono": "Em",
+    "letra": "Intro: Em B Em B Em\n\n    Em             Am\nBailando en el festival\n     B         Em\ncomo santiagueño\n                    Am\ncostumbre del pago es\n      B         Em\nhacerlo sin miedo\n   C            Am\nla moza más linda\n     B          Em\nansiosa me espera\n\n    Em              B\nAtajate que voy mi amor\n             Em\ncon ganas de mudancear\n                   B\ny en el corazón repicar\n                Em\nel alma y enamorar\n\n   Em          C\nSe van arrimando\n  B            Em\notros bailarines\n\n    Em                 B\nQue comienza mucho a gustar\n                       Em\nporque todos quieren bailar\n                       B\ny la fiesta se agranda más\n                  Em\ncon cohetes y palmas\n\n      D               G\nBailando este gato estoy\n   B          Em\ncomo santiagueño\n\nSEGUNDA\nIntro: Em B Em B Em\n\nEm             Am\nUna niña del lugar\nB         Em\nasoma su cuerpo\n       Am\nen el escenario\nB           Em\nse arma el revuelo\nC        Am\ntodo es alegría\nB        Em\nbajo mi cielo\n\nEm                     B\nHay un viejo que está machao'\n                        Em\ny que su poncho hace revolear\n                B\nsi toma hasta el aclarar\n                   Em\ntirao' va a quedar nomás\n\nEm         C\nLa última vuelta\nB             Em\npara el gato alegre\n\nEm          B\nLevantemos polvaredal\n                  Em\nzapateando hasta terminar\n                  B\nla donosa sigan igual\n               Em\nfloreando su zarandear\n\nD                   G\nBailando este gato estoy\n   B          Em\ncomo santiagueño"
+  },
+  {
+    "titulo": "Gato de la madrugada",
+    "sub": "",
+    "ritmo": "Gato",
+    "tono": "Em",
+    "miTono": "Em",
+    "letra": "Intro: Em B7\n\nG                 B7         Em\nUna madrugada que olía a cedrón\nG                    B7       Em\npoleo y albahaca este gato nació.\nVuelta: G B7 Em\n              B7                     Em\nCantaban cardenales, calandrias y zorzales\n                 G                B7           Em\nqué lindo que se oía en medio el monte el bandoneón.\n\n   G                   B7       Em\nMe engozaba el alma un dulce violín\n              B7                   Em\nachalay ese bombo, qué lindo ese rasguido,\n                  G          B7            Em\nque se mete en la sangre alegrando el corazón.\n                 G           B7     Em\nMadrugando en mi alma este gato nació.\n\nSEGUNDA\nIntro: Em B7\n\nG                B7      Em\nEl sol despacito salió a mosquetear\nG                        B7        Em\ny el coro del monte a la fiesta se unió.\nVuelta: G B7 Em\n                B7                 Em\nEl canto de los gallos salidos como ruego,\n            G             B7         Em\nrevuelos de cencerros que venían del corral.\n\nG              B7           Em\nQué lindo es el monte en su despertar,\n                B7                   Em\ntodo ese olor a vida, con su perfume agreste,\n                  G      B7           Em\nque se mete en la sangre alegrando el corazón.\n                 G         B7   Em\nMadrugando en mi alma este gato nació."
+  },
+  {
+    "titulo": "Un domingo santiagueño",
+    "sub": "",
+    "ritmo": "Chacarera",
+    "tono": "A",
+    "miTono": "A",
+    "letra": "A                 D\nUn domingo santiagueño\n                       A\nno es un domingo cualquiera,\n      F#7             B\nhasta el sol viene saliendo\n          E7        A\ncon ritmo de chacarera.\n\nA                  D\nCada cual tiene su dicha\n                      A\ncon baile, empanada y vino,\n           F#7   B\nzapatiando en el salitre,\n   E7                    A\nsi más caliente es más lindo.\n\nA              D\nY arriba en la costanera\n                 A\nse ven parrillas humeando,\n   F#7         B\nes hora que el calavera\n      E7          A\nestá el incendio apagando.\n\nESTRIBILLO\nA            D\nLos domingos santiagueños\n                     A\ndiosquiera que no se pierdan,\n   F#7               B\nde aquí le mando un suspiro\n  E7        A\na mi tierra santiagueña.\n\nSEGUNDA\nA                D\nAñoranzas de La Banda,\n                A\nachalitay, qué hermosura,\n      F#7     B\nApalo con sus hermanos\n         E7 A\npreparan la compostura.\n\nA                  D\nQué linda noche i pasao\n                A\npensando de que volvía\n  F#7            B\na empacharme con zapallo,\n     E7          A\ntuna fresquita y sandía.\n\nA                D\nComieron toda la noche\n                 A\nvino y pastel de vizcacha\n  F#7           B\ny ahora caminan firme\n            E7 A\ndisimulando la macha."
+  },
+  {
+    "titulo": "El karma de vivir al sur",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "el karma de vivir al sur\n\n          Dsus4\nMe vas a hacer feliz,\n        Em            G       Am\nvas a matarme con tu forma de ser.\n         Dsus4\nMe vas a hacer reir,\n        Em            G       Am\nvas a matarme con tu forma de ser.\n\n                  Ab\nMe vas a hacer feliz,\n          Bb                   Am\nvas a mostrarme ese lado inconcluso.\n                 Ab\nMe vas a hacer reir,\n          Bb                    Am\nvas a mostrarme lo que no puede ser.\n\nMe vas a hacer feliz,\nvas a matarme con tu forma de ser.\nMe vas a hacer reir,\nvas a matarme con tu forma de ser.\n\nNo voy a desistir\naunque me digan que todo es tan iluso.\nNo voy a desistir\naunque me digan que ya no hay nada más.\n\nDm7                       Esus4       E     Am\n Sentir hasta resistir el karma de vivir al sur.\nF                         Esus4       E      Am\n Sentir hasta resistir el karma de vivir sin luz.\n\nDm7\n Yo sé que un día ya no habrá perdón,\nEsus4          E               E7\n yo sé que un día ya no habrá confusión\n       Am           Am/G# Am/G Am/F#        F9\nporque si confías en mí        todo estará siempre.\n\n[Dsus4  Em  Am] x2\n\nMe vas a hacer feliz.\nMe vas a hacer feliz."
+  },
+  {
+    "titulo": "No te animás a despegar",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "Gm",
+    "miTono": "Gm",
+    "letra": "INTRO:C11-Gm7-C11-Gm7-C11\n\nGm7                      Ebmaj7\nPorque te quedas en via muerta?\nGm7                      Ebmaj7\nPorque te quedas en via muerta?\nC7/9           Dm           Ebmaj7\nNo se porque vas hacia ese lugar\nF            F/A        Gm7\nDonde todos han descarrilado\nF   Ebmaj7\nPorque?\nC7/9    D7   C7/9    D7\nNo te animas a despegar\n\nYo te digo\nGm7                      Ebmaj7\nPorque te quedas en via muerta?\nGm7                      Ebmaj7\nPorque te quedas en via muerta\nC7/9           Dm           Ebmaj7\nNo se porque vas hacia ese lugar\nF            F/A         Gm7\nDonde todos han descarrilado\nF   Ebmaj7\nPorque?\nC7/9    D7   C7/9    D7\nNo te animas a despegar\n\nYo te digo porque\n\nSOLO: con base de: Porque...\n\nCorte:Gm7\n\n2do Solo: con base de Porque...\n\nPOSICIONES:\n    EADGBE\nC11:x3x331\nGm7:3xx331\nEbmaj7:x6878x\nC7/9:x3233x\nDm:xx0231\nF:133211\nF/A:5x356x"
+  },
+  {
+    "titulo": "Nos siguen pegando abajo",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "nos siguen pegando abajo\n\n\nIntro:[E  G  D  A  E] x4\n\nG              D\nElla es menor, él es normal\n   A\ny lo que están haciendo\n         E\nes un pecado mortal.\n\nElla se quedó sin boda ni arroz\ny al novio lo agarraron\nentre muchos más que dos.\n\n           C9                     G9\nMiren lo están golpeando todo el tiempo,\n   D7/B                    E   D\nlo vuelven, vuelven a golpear.\n    C9     G9       Dsus4\nNos siguen pegando abajo.\n\nInter: como Intro.\n\nYo estaba en un club, no había casi luz,\nla puerta de salida\ntenía un farolito azul.\n\nÉl se desmayó delante de mí.\nNo fueron las pastillas,\nfueron los hombres de gris.\n\nMiren lo están golpeando...\n\nInter.\n\n G                 D\nMa, ma, ma, estoy yéndome.\n       A             E\nSoy como una luz apagándose.\n G                 D\nDesde el piso los pude ver\n       A             E\nlocos de placer, alejándose.\n\nMiren lo están golpeando..."
+  },
+  {
+    "titulo": "Pasajera en trance",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "F",
+    "miTono": "F",
+    "letra": " F            F/A  G\nElla esta por empacar,\n          F     F/A         G\nquizá consiga pasaje en la borda.\n F            F/A   G          Dsus4\nElla esta por despegar, ella se va.\n\nElla viaja sin parar,\nel viejo truco de andar por las sombras.\nElla baila sobre el mar, ella se va.\n\nD\n Pasajera en trance,\n              G          C D5\npasajera en transito perpetuo.\nD\n Pasajera en trance,\n             G            C D5\ntransitando los lugares ciertos.\n\nUn amor real\nes como dormir y estar despierto.\nUn amor real\n           G           C\nes como vivir en aeropuertos.\n\nFin: con acordes del tema."
+  },
+  {
+    "titulo": "Total interferencia",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "GMaj7                      EbMaj7\nTiene manos de marfil y teclados de Taiwan\n   Gm7        Am7          C7\nun chico conectado con la ciencia.\nGMaj7                         EbMaj7\nBusca aliados de jazmín y una daga de metal\n  Gm7         Am7          Bm7\ny tiene apuro y a la vez paciencia.\n\n         Dm BbMaj7 F  Gm Dm  Am\nTiene un ra-  dio pa- ra vi- vir,\n F  Gm Dm  Am\npa- ra vi- vir.\n\n  C6    Am/B BbMaj7\nEstamos como  el\n F/A                 BbMaj7\namor que se echa a perder\n   A/C#  Dm   Gm      GbMaj7\nviolando todo lo que amamos\n F  Gm Dm  Am\npa- ra vi- vir,\n\nGMaj7                      EbMaj7\nTiene agujeros que no ve, picaduras de escorpión\n   Gm7        Am7          C7\nque oculta un maquillaje de inocencia.\nGMaj7                         EbMaj7\nTodo lo que ves o es como la imaginación\n  Gm7         Am7          Bm7\nse junta con total interferencia.\n\nDm BbMaj7 F Gm    Dm Am\nEn la radio suena un violín.\n\n           C6      Am/B BbMaj7\nPienso que estamos como el\n F/A                 BbMaj7\namor que se echa a perder\n   A/C#  Dm   Gm      GbMaj7\nviolando todo lo que amamos\n F  Gm Dm  Am\npa- ra vi- vir,"
+  },
+  {
+    "titulo": "11 y 6",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": " G                         F#m7(b5)   B7\nEn un cafe se vieron por casualidad\n   Em         Em7       A7\ncansados en el alma de tanto andar\nCm7     Gadd9     Am7       Dsus4\nella tenia un clavel en mano.\n\n          G                             F#m7(b5)  B7\nEl se acerco, le pregunto si andaba bien\n   Em          Em7              A7\nllegaba a la ventana en puntas de pie\n       Am7                  Dsus4    G7\ny la llevo a caminar por Corrientes\n\nCadd9   Bm7   Em7   G7  Cadd9  Bm7  Em7  G7\nMi ---  ren   todos,    e ---- llos solos\nCadd9  B7  Em        A7\npue -- den mas que el amor\n           Am7                 Dsus4  G7\ny son mas fuertes que el Olimpo\n\nCadd9   Bm7 Em7  G7      Cadd9  Bm7  Em7    G7\nSe    escondieron        en     el   centro\n Cadd9  B7 Em        A7\ny en    el baño de un bar\n         Am7              Dsus4 G7\nsellaron todo con un beso.\n\n\n           G                         F#m7(b5)   B7\nDurante un mes vendieron rosas en La Paz\n   Em                 Em7       A7\npresiento que no importaba nada mas\n  Cm7     Gadd9    Am7    Dsus4\ny enre los dos juntaban algo.\n           G                         F#m7(b5)   B7\nNo se por que pero jamas los volvi a ver\n   Em        Em7         A7\nel carga con 11 y ella con 6\n          Am7                Dsus4    G7\ny si se reia, el le daba la luna.\n\n\nCadd9   Bm7   Em7   G7  Cadd9  Bm7  Em7  G7\nMi ---  ren   todos,    e ---- llos solos\nCadd9  B7  Em        A7\npue -- den mas que el amor\n           Am7                 Dsus4  G7\ny son mas fuertes que el Olimpo\n\nCadd9   Bm7 Em7  G7      Cadd9  Bm7  Em7    G7\nSe    escondieron        en     el   centro\n Cadd9  B7 Em        A7\ny en    el baño de un bar\n         Am7              Dsus4 G7\nsellaron todo con un beso.\n\n\nG   F#m7(b5) B7      Em  Em7 A7\nuh, uh uh,   uh, uh, uh.......\nC7  C G Em C7\nah, ah......\n\n(G - C - D - C) X4\n\nFinal: G - C - D - C                    GMaj7.\n                   trecillos X4 tiempos"
+  },
+  {
+    "titulo": "Canción de Alicia",
+    "sub": "e- - - 0- 0- -0-0- 0-0- -0-0- - - - - -",
+    "ritmo": "Rock en castellano",
+    "tono": "A",
+    "miTono": "A",
+    "letra": "b- - - 5- 5- - - - 5-5- - - - - - - - -\ng- - - - - - - - - - - - - - - - - - - -\nd- - - - - - - - - - - - - - - - - - - -\na- - - - - - - - - - - - - - - - - - - -\nE- - - - - - - - - - - - - - - - - - - -\n\n\n     2ª guitarra arriva de la 1º:(X2)\n\ne- - 5- 5- - - 2- 2- - 0- 0- 0- - - 0- -2 -\nb- - 5- 5- - - 2- 2- - 0- 0- 0- 2- -0 - 2- -\ng- - - - - - - - - - - - - - - -2 - - - - -\nd- - - - - - - - - - - - - - - - - - - - - -\na- - - - - - - - - - - - - - - - - - - - - -\nE- - - - - - - - - - - - - - - - - - - - - -\n\n\n\ne- - 5- 5- - - 2- 2- - 0- 0- 0- - - - - -\nb- - 5- 5- - - 2- 2- - 0- 0- 0- 2- 2- - - -\ng- - - - - - - - - - - - - - - -2 -2- - - -\nd- - - - - - - - - - - - - - - - - - - - - -\na- - - - - - - - - - - - - - - - - - - - - -\nE- - - - - - - - - - - - - - - - - - - - - -\n\nMelodía:\n\nA         A2  A   A2   A     C#m\nQuien sabe A - li - cia este país\nD         E/D    A4  A  Esus4  E\nno estuvo hecho por-que si\nA      A2 A  A2 A    C#m\nte vas a ir, vas a salir\nD       E/D\npero te quedas\nC#7sus4   C#7    F#m/C#\ndonde mas vas a ir?\n         F#/C#\ny es que aquí sabes,\n\n\n\ne- - - - - -2 - - - - - 2- - - - - - 2 - - - - - 2- - -\nb- - - -4 - - - - - -4 - - - - - -4 - - - - - 4- - - - -\ng- - 4- - - - -4 -3 - - - -3 - 1- - - - 1- - - - - - - -\nd- - - - - - - - - - - - - - - - - - - - - 4- - - - 4 -\na- - - - - - - - - - - - - - - - - - - - - - - - - - - -\nE- - - - - - - - - - - - - - - - - - - - - -- - - - - -\n\n    el trabalenguas, trabalenguas\n\n\n\ne- - - - - -3 - - - - - 3- - - - - - 3 - - - - - 2- - -\nb- - - -5 - - - - - -5 - - - - - -5 - - - - - 4- - - - -\ng- - 5- - - - -5 -4 - - - -4 - 2- - - - 2- - - - - - - -\nd- - - - - - - - - - - - - - - - - - - - - 0- - - - 0 -\na- - - - - - - - - - - - - - - - - - - - - - - - - - - -\nE- - - - - - - - - - - - - - - - - - - - - -- - - - - -\n\n\n   el asesino te asesina\n\n\n\ne- - - - - - - - - - - - - - - - - - - - - - - - - - - -\nb- - - - - - - - - - - - - - - - - - - - - - - - - - - -\ng- - - - - - - - - - - - - - - - - - 0- - - 0- - - - - -\nd- - 3- 2- 0- - - - - - 0- - - - - 2- - - 0- - - - - - -\na- - - - - - - 3- 2- 3- - -2 -3 - - - - 2- - - 3- 0- - -\nE- - - - - - - - - - - - - - - - - - - - - -- - - - - -\n\n\ny es mucho para ti\n\n\n\n\ne- - - - - - - - - - - - - - - - - - - - - - - - - - -\nb- - - - - - - - - - - - - - - - - - - - - - - - - - -\ng- - - - - - - - - - - - - 0- - - - - - - - - - - - - -\nd- - - - - - - - 0- 2- 3- - - - - - - - - - - - - - - -\na- - - -0 -2 -3 - - - - - - - - - - - - - - - - - - - -\nE- - -3 - - - - - - - - - - - - - - - - - - -- - - - - -\n\nSe acabo ese juego que te\n\n  Am   G  F          Asus4\nhacia fe liz         uhhh\n\n\n\n\n\nAsus4\nNo cuentes lo que viste en los jardines\n           Dm/A\nel sueño acabo\n           Fm7/A   D/A       Asus4\nya no hay morsas          ni tortugas.\nAsus4\nUn río de cabezas aplastadas\n             Dm/A\npor el mismo pie\n         Fm7/A   D/A            Asus4\njuegan cricket          bajo la luna\n\n\n\n\n\nE/G#                    Asus4            E\nEstamos en la tierra de nadie - pero es mía-\n   E/G#                 Asus4                 E\nlos inocentes son los culpables -dice su señoría\n             E\nel rey de espadas.\n\nNo cuentes que hay detrás de aquel espejo\nno tendrás poder\nni abogados, ni testigos.\nEnciende los candiles que los brujos piensan en volver\na nublarnos el camino\nestamos en la tierra de todos\nen la vida\nSobre pasado y sobre futuro\nruina sobre ruina\nquerida Alicia.\n\nQuien sabe Alicia...\n\n\nSe acabo, se acabo este,\nse acabo este juego,\nse acabo este juego que te hacia feliz.\n\n\n\nRiff del solo:\n\ne- - - - - - - - - - - - - - - - - - - - - - -\nb- - - - - - - - - - - - - - - - - - - - - - -\ng- - - - - - - - - - - - - - - -  - - - - - -\nd- - - - - - - - - - - - 5- 7- - - - - - - - -\na- -7 - 7- -5 -7 -5 -7 - 3- 5- - - - - - - - -\nE- -5 - 5- -3 -5 -3 -5 - - - - - - - - - - - -"
+  },
+  {
+    "titulo": "All My Loving",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "F#m",
+    "miTono": "F#m",
+    "letra": "      F#m           B7\nClose your eyes and I’ll kiss you,\n   E          C#m\ntomorrow I’ll miss you;\n   A          F#m         D   B7\nremember I’ll always be true.\n         F#m         B7\nAnd then while I’m away\n            E         C#m\nI’ll write home ev’ry day,\n          A           B         E\nand I’ll send all my loving to you.\n\nI’ll pretend that I’m kissing\nthe lips that I’m missing\nand hope that my dreams will come true.\nAnd then while I’m away\nI’ll write home ev’ry day\nnd I’ll send all my loving to you.\n\n        C#m   C(#5)           E\nAll my loving I will send to you.\n       C#m      C(#5)              E\nAll my loving., darling, I’ll be true.\n\nInter:[A E B E]\n\nClose your eyes...\n\nAll my loving...\n       C#m                     E\nAll my loving, oh, oh, all my loving, uh, uh,\n            C#m                   E\nuh, all my loving I will send to you."
+  },
+  {
+    "titulo": "Ana no duerme",
+    "sub": "ANA NO DUERME - ALMENDRA (LUIS ALBERTO SPINETTA)",
+    "ritmo": "Rock en castellano",
+    "tono": "B",
+    "miTono": "B",
+    "letra": "B              B\n Ana no duerme, espera el día,\nB                  B\n sola en su cuarto, Ana quiere jugar;\nC#m              C#m\n sobre la alfombra toca su sombra,\nC#m              C#m\n cuenta las luces, mira la gran ciudad.\nEm              C               Am\n Ana no duerme, juega con nada, tal vez mañana despierte\n Em               C    Em               G7\n sobre el mar, el mar, sobre el mar, el mar...\n\nB             B\n Ana de noche, hoy es un hada,\nB               B\n canta palabras, canta y se torna en luz;\nC#m              C#m\n sobre la alfombra toca su sombra,\nC#m              C#m\n cuenta las luces, mira la gran ciudad.\nA              B               C\n Ana no duerme, juega con nada, tal vez mañana despierte\n Em               C    Em               G\n sobre el mar, el mar, sobre el mar, el mar...\n\n\nInter: B - G - D - A#\n\nB              B\n Ana no duerme, espera el día,\nB                  B\n sola en su cuarto, Ana quiere jugar;\nC#m              C#m\n sobre la alfombra toca su sombra,\nC#m              C#m\n cuenta las luces, mira la gran ciudad.\nEm              C               Am\n Ana no duerme, juega con nada, tal vez mañana despierte\n Em               C    Em               G7\n sobre el mar, el mar, sobre el mar, el mar..."
+  },
+  {
+    "titulo": "Bajan",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "E",
+    "miTono": "E",
+    "letra": "Bajan\n\n\nE            F#m\n  Tengo tiempo   para saber\n\nC#m           D#dim    B\n   si lo que sueño concluye en algo\n\nE            F#m\n No te apures   ya más loco\n\nC#m             D#dim     B\n   porque es entonces cuando las horas\n\n\nC#m       G#m    B          C#m\nbajan, el día es vidrio sin sol\n\n          G#m         B Cm    C#m\nBajan, la noche te ocul-ta la voz\n\n     C   C   Am7 G#7 F#m7\nY además vos que-rés Sol\n\n    C#m        D#m                 C#m - C#m/D# - C#m/E - Amaj7\nDespacio también podés hallar la luna"
+  },
+  {
+    "titulo": "Bajaste del norte",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "Bajaste del norte\n\nG               Bm\nBajaste del norte\n      Em                 Bm\nsin más que cuatro hijos,\nC                         G\ny aquel cielo de tus ojos\n             A                            D      D7\ny una mujer que te aprendió a seguir\n\n\n\n\nEm                 Am\nPor eso te entiendo\n                     F#       Bm\ncuando en un vaso te vas,\nC                 G\nquien sabe adonde\n               A                     D\nbuscando eso, que llaman paz.\n\nY aunque sabés que te dicen\nviejo borracho, sos tan bueno\nque ni siquiera al diablo los mandás,\nlos mandás."
+  },
+  {
+    "titulo": "Boletos",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "G\nMe quitan el sol, me sacan a Dios,\n                       F#m F    C Bb\nme secan el sudor y el sabor\nG\n¿Quién se puede reír de tanto sufrir\n                       F#m   F    C C#\n el frío y el calor, y el dolor?\n\n D                              E/D\n¿Quién escupe los ojos sin resistencia\n\n        G/D                       D\ndel que trajo el vino dulce para podernos ver?\n\n D                               E/D\n¿Quién por poco dinero te supo hacer feliz?\n\n            G/D\n¿Quién fue amigo de tus hijos?\n\n         D               E     A             D\n¿Y quién consiguió los boletos para verme cantar?\n\n D                   E    A            C# D C# D C# D Eb\n¿Quién les dio un acabado cuadro de su ma-ma-a-a-a-a-a- a?\n\nG\nMadres, hijas, hermanas van a escuchar\n                       F#m F    C Bb\nel llanto del adiós, del adiós\nG\nPronto en esta ciudad me van a nombrar\n                 F#m   F    C C#\nciudadano legal, como vos\n\nD                             E/D\nSoy el hijo de todas y el amante también\n\n        G/D                          D\n¿No se atreve, dulce dama, a ser mi mujer infiel?\n\nD                                    E/D\nSoy el mendigo de azul, el que cantó para el rey\n\n       G/D\n¿No es verdad noble señora?\n\n          D               E     A             D\nSoy quien consiguió los boletos para verme cantar\n\nD                   E    A             C# D C# D C# D Eb\n¿Quién les dio un acabado cuadro de su ma-ma-a-a-a-a-a- a?"
+  },
+  {
+    "titulo": "Can't Buy Me Love",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "Em",
+    "miTono": "Em",
+    "letra": "Can't buy me love\n\n\n              Em    Am    Em  Am\nCan't buy me love,      love,\n              Dm7  G7\nCan't buy me love.\n\n\n     C7\nI'll buy you a diamond ring my friend, if it makes you feel alright.\n     F7                                 C7\nI'll get you anything my friend, if it makes you feel alright.\n      G7              F7                                       C7\nCause I don't care too much for money, money can't buy me love.\n\n\n      C7\nI'll give you all I've got to give, if you say you love me too.\n  F7                                     C7\nI may not have a lot to give but what I got I'll give to you.\nG7              F7                                   C7\nI don't care too much for money, money can't buy me love.\n\n\n              Em  Am     C7\nCan't buy me love,    everybody tells me so.\n              Em  Am Dm7         G7\nCan't buy me love,   no, no, no, no."
+  },
+  {
+    "titulo": "Carito",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "E",
+    "miTono": "E",
+    "letra": "E        Bbdim            E\n  Sentado solo en un banco en la ciudad,\n            E                     F#m\n  con tu mirada recordando el litoral,\n              A                           E            C#7\n  tu suerte quiso estar partida mitad verdad, mitad mentira,\n           F#m          B7           E\n  como esperanza de los pobres prometida.\n\n  Andando solo bajo la llovizna gris,\n  fingiendo duro que tu vida fue de aquí.\n  ¿Por qué cambiaste un mar de gente por donde gobierna la flor?\n  Mirá que el río nunca regaló el color.\n\nE7   A             G#m   C#7\n  CARITO, SUELTA TU PENA,\n             F#m      B7                 Bm7 E7\n  SE HAGA DIAMANTE TU LÁGRIMA ENTRE MIS CUERDAS.\n     A              G#m    C#7\n  CARITO, SUELTA TU PIEDRA,\n         F#m            B7           E\n  PARA VOLAR COMO EL ZORZAL EN PRIMAVERA.\n\nSolo de armónica, con los siguientes acordes de fondo:\nF#m B7 E C#7 F#m B7 E E7 A B7 E C#7 F#m B7 E\n\n  En Buenos Aires los zapatos son modernos,\n  pero no lucen como en la plaza de un pueblo.\n  Dejá que tu luz chiquitita le hable en secreto a la canción\n  para que te ilumine un poco más el sol.\n\n  Cualquier semilla cuando es planta quiere ver\n  la misma estrella de aquel atardecer,\n  que la salvó del pico agudo refugiándola al oscuro\n  de la gaviota arrasadora de los surcos.\n\n  CARITO, YO SOY TU AMIGO,\n  ME OFREZCO ÁRBOL PARA TU NIDO.\n  CARITO, SUELTA TU CANTO,\n  QUE EL ABANICO EN MI ACORDEÓN LO ESTA ESPERANDO.\n\nSolo de armónica, con los siguientes acordes de fondo:\nF#m B7 E C#7 F#m B7 E E7 A B7 E C#7 F#m B7 E"
+  },
+  {
+    "titulo": "Como mata el viento norte",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "C",
+    "miTono": "C",
+    "letra": "Como mata el viento norte\n\nC\nComo mata el viento norte\n         Dm/C\ncuando agosto esta en el dia\n        G/C                      Am   F\ny el espacio nuestros cuerpos ilumina\n       C\nUn mendigo muestra joyas\n       Dm/C\na los ciegos de la esquina\n       G/C                   Am    F\ny un cachorro del señor nos alucina\n         C\nHablame solo\n            Dm\nde nubes y sol\n          F\nno quiero saber nada\n         Ab               G\ncon la miseria del mundo hoy\n\nHoy es un buen dia\nhay algo de pan\nla tierra es nuestra hermana\n\nMarte no cede\nal poder del sol\nVenus nos enamora\nla luna sabe de su atraccion\nMientras nosotros\nmorimos aqui\ncon los ojos cerrados\nno vemos mas que nuestra nariz\n\nComo mata el viento norte\ncuando agosto esta en el dia\ny el espacio nuestros cuerpos ilumina\n\n       C          Dm/C\nSeñor Noche se mi cuna\n\nSeñor Noche se mi dia\n     G/C                     Dm\nmi pequeña almita baila de alegria\n        F\nde alegria\n C  C G C\nde alegria"
+  },
+  {
+    "titulo": "Confesiones de invierno",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "confesiones de invierno\n\n\nIntroducción: D, C, C/B, D, (2 veces)\nD                        G  D     C          A7   D\nMe echo de su cuarto gritándome: 'No tienes profesión'\n                            G    D    C        A7         D\nTuve que enfrentarme a mi condición, en invierno no hay sol\nDsus/B                Dsus/A#      D    C                 C#   D\nY aunque digan que va a ser muy fácil es muy duro poder mejorar\nDsus/B        Dsus/A#      D          C            G       A7\nHace frío y me falta un abrigo y me pesa el hambre de esperar\n\nD                    G      D  C          A7    D\nQuien me dar  algo para fumar o casa en que vivir\n                           G     D   C      A7     D\nSe que entre las calles debes estar pero no se partir\nDsus/B                Dsus/A#      D    C         C#   D\nY la radio nos confunde a todos, sin dinero la pasare mal\nDsus/B         Dsus/A#      D       C                 A7   D\nSi se comen mi carne los lobos no podré robarles la mitad\n\nD                        G     D   C       A7   D\nDios es empleado en un mostrador: da para recibir\nD                         G    D    C      A7  D\nQuien me dar  un crédito mi Señor, sólo se sonreír\nDsus/B           Dsus/A#     D    C         A7        D\nY tal vez espere demasiado, quisiera que estuvieras aquí\nDsus/B        Dsus/A#      D          C                     G    A7\nCerraran las puertas de este infierno y es posible que me quiera ir\n\nD                      G     D   C       A7        D\nConseguí licor y me emborrache, en el baño de un bar\n                            G    D  C       A7      D\nFui a dar a la calle de un puntapié y me sentí muy mal\nDsus/B           Dsus/A#     D    C         C#        D\nY si bien yo nunca había bebido en la cárcel tuve que acabar\nDsus/B        Dsus/A#   D          C            G    A7\nLa fianza la pago un amigo, las heridas son del oficial\nD                       G    D  C        A7    D\nHace cuatro años que estoy aquí y no quiero salir\n                   G     D   C          A7       D\nYa no paso frío y soy feliz, mi cuarto da al jardín\nDsus/B           Dsus/A#         D    C         C#        D\nY aunque a veces me acuerdo de ella, dibuje su cara en la pared\nDsus/B        Dsus/A#      D          C         A7     D\nSolamente muero los domingos y los lunes ya me siento bien\n\nAcordes:\n   Dsus/B   Dsus/A#    C/B\nE----3--------3---------0\nB----3--------3---------1\nG----0--------0---------0\nD----x--------x---------0\nA----2--------1---------2\nE----x--------x---------x"
+  },
+  {
+    "titulo": "Eiti Leda",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "B",
+    "miTono": "B",
+    "letra": "Eiti leda\n\nB             F#/A#\nQuiero verte la cara\n   E/G#                      B\nBrillando como una esclava negra\n   A            G7+     F#4-F#\nSonriendo con ganas\n\n B              F#/A#\nLejos, lejos de casa\n   E/G#                    B\nNo tengo nadie que me acompañe\n           F#4-F#\nA ver la mañana\n\n           B                  E4-E\nNi que me de la inyección a tiempo\n       G         A            Bm\nAntes que se me pudra el corazón\n      B                  F#/A#  F# Bm\nNi caliente esos huesos fríos   ne-na\n\n\n(CON LA MISMA BASE)\n\nQuiero verte desnuda\nEl día que desfilen los cuerpos\nQue han sido salvados\n\nSobre alguna autopista\nQue tenga infinitos carteles\nQue no digan nada\n\nY realmente quiero que te rías\nY que digas que no es un juego nomás\nO me mates este mediodía, nena\n\nInter:(E   F#m11/E   G#m11/E  F#m11/E) X4\n\nTeclados: (a ab a ab a ab e b, eeeeeeeee b) 2 veces\n\n\n  E                   D/E\nEntrando al cuarto volando bajo\n    C#m            G#m         F#m   B7  E\nLa alondra ya esta cerca de tu cama, nena\n\nQuiero quedarme no digas nada\nEspera que las sombras se hayan ido, nena\n\nC\nNo ves mi capa azul\nFm\nMi pelo hasta los hombros\nC\nLa luz fatal\nF\nLa espada vengadora\n    C                       G\n¿No ves que blanco soy, no vez?\n   C                        G\n¿No ves que blanco soy, no vez?"
+  },
+  {
+    "titulo": "Estoy parado en el medio de la vida",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "esoy parado en el medio de la vida\n\n\nG                D\nQue estamos esperando\n      A        E\npara recibir amor;\n\nyo comprendo tu llanto,\nla vida y el dolor.\n\nMe ha tomado el tiempo\npara verlos otra vez;\n\nduermanse un poquito\ny recibanme.\n\nF                G\nCon los ojos cerrados\n          C\nme ves mejor,\nF             G\ncomo amo sus caras\n                   C         G/B  Am\naunque a veces me den temor.\nF                 G           C    G/B  Am\nEstoy parado en medio de la vida.\nE              G#m           A9    C  D\nY aqui yo me siento muy muy bien,\nE          G#m\nAunque me echen, me peguen\n      A9       C              D\no me reten, yo ya no lo sentire.\nE            G#m   D     E/D   A9\nY yo se que todos son igual a mi,\n   D                     E/D\nel alma, sus ojos, sus manos,\n             A9\nson igual a mi.\n   D                    E/D\nEl alma, sus ojos, sus manos,\n             F  G  A\nson igual a mi..."
+  },
+  {
+    "titulo": "Fade Away",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "A",
+    "miTono": "A",
+    "letra": "A\n   When I was young I thought I had my own key\nAmaj7\n   I knew exactly what I wanted to be\nDsus2     A\nNow   I'm sure\n                  B7    Dsus2\nYou've boarded up every door\n\n\nVerse 2\n-------\nA\n   Lived in a bubble days were never ending\nAmaj7\n   Was not concerned about what life was sending\nDsus2       A\nFantasy was real\n           B7                   Dsus2\nNow I know much about the way I feel\n\nPre-chorus\n----------\nB7                   Dsus2\n  I'll paint you the picture\n                       B7                 Dsus2\n'Cos I don't think you live round here no more\n                B7                  Dsus2\nI've never even seen the key to the door\n                 B7             Dsus2\nWe only get what we will settle for\n\nChorus\n------\nA             E\n  While we're living\n    G                D\nThe dreams we had as children\n      A\nFade away\n            E\nWhile we're living\n    G                D\nthe dreams we had as children\n      A\nfade away\n            E\nWhile we're living\n    G                D\nthe dreams we had as children\n     A\nfade away\n            E\nWhile we're living\n    G                D\nthe dreams we had as children\n     Fmaj7    Dsus2    A    Asus2 A\nfade away,    away,    away\n          Fmaj7    Dsus2    A    Asus2 A\nthey fade away,    away,    away"
+  },
+  {
+    "titulo": "Half the World Away",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "Am",
+    "miTono": "Am",
+    "letra": "Intro: C,Fmaj7th twice\n\nC               Fmaj7th         C                   Fmaj7th\nI would like to leave this city this old town don't smell to pretty\n   C C(/B)         Am           D                 Fmaj7th\nAnd I can feel the warning signs running around my mind\nC          Fmaj7th                C                  Fmaj7th\nAnd when I leave this island I'll book myself into a soul asylum\n   C C(/B)          Am            D                 Fmaj7th\nCos' I can feel the warning signs running around my mind\nAm        C        E                        Am\nSo here I go still scratching around in the same old hole\n   Fmaj7th                 D            G   G7th\nMy body feels young but my mind is very o--old\nAm             C           E                           Am\nSo what do you say you can give me the dreams that are mine anyway\nFmaj7th             Fm                  C  C(/B)       Am\nHalf the world away half the world away half the world away\n          D                               Fmaj7th\nI've been lost i've been found but i dont feel bound"
+  },
+  {
+    "titulo": "Hombres de hierro",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "C",
+    "miTono": "C",
+    "letra": "hombres de hierro\n\nMi     La         Mi    Si7\nLarga muchacho tu voz joven\n      La      Mi      Si7\ncomo larga la luz el sol\n          Do#m          Mi*         La        Mi\nque aunque tenga que estrellarse contra un paredón\n          Do#m           Mi*         La         Mi\nque aunque tenga que estrellarse se dividira en dos\n\nSuelta muchacho tus pensamientos\ncomo anda suelto el viento\nsos la esperanza y la voz que vendrá\na florecer en la nueva tierra\n\nLa                         Si7        Mi\nHombres de hierro que no escuchan la voz\nLa                         Si7       Mi\nHombres de hierro que no escuchan el grito\nLa                         Si7       Mi\nHombres de hierro que no escuchan el dolor\nDo#m      Mi*       LA     Mi\ngente que avanza se puede matar\nDo#m      Mi*       La     Mi\npero los pensamientos quedaran\n\nBis intro\n\nPuntas agudas ensucian el cielo\ncomo la sangre en la tierra\ndiles a esos hombres que traten de usar\na cambio de las armas su cabeza\n\nHombres....\n\narmonica\nMi| Mi| La| MI| La| Mi| La| Mi| Mi|\n\nHombres de hierro que no escuchan la voz\nhombres de hierro que no escuchan el grito\nhombres de hierro que no escuchan el llanto\ngente que avanza se puede matar\npero los pensamientos quedaran\npero los pensamientos quedaran\npero los pensamientos quedaran\npero los pensamientos quedaran\npero los pensamientos quedaran"
+  },
+  {
+    "titulo": "I Gotta Blues",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "                        I GOT THE BLUES\n                        ROLLING  STONES\n\nNOTE: ON THIS SONG USE BARRE CHORDS, YOUR \"PINKIE\" FINGER, AND\n      SLIDES FROM ONE CHORD TO ANOTHER TO GET THAT \"STONES SOUND\".\n\n\nINTRO:\n       G  D  Em  C   G   D  C  G  D\n\nVERSE:\n      D       G            D\n       As I stand by your flame\n               Em          C\n       I get burned once again\n      G             D        C    G  D\n       Feeling low down and blue\n\n\nVERSE:\n      D      G          D\n       As I sit by the fire\n                Em     C\n       Of your warm desire\n      G            D        C    G      G  G   G D\n       I got the blues for you, yeah    /  /   / /\n\n\nCHORUS:\n      A                          D\n       Every night you've been away\n      A                        D\n       I've sat down, I have prayed\n                    C           G         D\n       That you're safe in the arms of a guy\n                  Em        C\n       Who will bring you alive\n      G                D          C    G\n       Won't drag you down with abuse, oh\n\n\nINSTRUMENTAL:    C  G   C  G   D\n\n\nVERSE:\n      D        G             D\n       In the silk sheet of time\n               Em            C\n       I will find peace of mind\n      G           D            C   G\n       Love is a bed full of blues\n\n\nOUTRO:\n                 D                 C   G\n       And I've got the blues for you\n                 D                 C   G\n       And I've got the blues for you\n                 D                      C   G\n       And I've bust my brains out for you\n                  D\n       And I'll tear my hair out\n                  C                         G\n       I'm gonna tear my hair out just for you\n               D\n       If you don't believe what I'm saying\n            C\n       At three o' clock in the morning, babe\n                             G\n       Well, I'm singing my song for you."
+  },
+  {
+    "titulo": "I'm So Tired",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "A",
+    "miTono": "A",
+    "letra": "I'm so tired\n\n\n A  G#7      D               E7        A  F#m7      D              E7\nI'm so tired, I haven't slept a wink, I'm so tired, my mind is on the blink.\n  A               E+         F#m          Dm\nI wonder should I get up and fix myself a drink, no, no, no\n\nI'm so tired, I don't know what to do, I'm so tired, my mind is set on you.\nI wonder should I call you but I know what you would do...\n\nA\nYou say I'm putting you on but it's no joke, it's doing me harm you know I\nE7\ncan't sleep, I can't stop my brain, you know it's three weeks, I'm going insane\n             D                                                   A\nyou know I'd give you everything I've got for a little peace of mind.\n\nI'm so tired, I'm feeling so upset. Although I'm so tired, I'll have another\ncigarette and curse Sir Walter Raleigh, he was such a stupid get.\nYou say..."
+  },
+  {
+    "titulo": "Judy Blue Eyes",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "Crosby, Stills, and Nash- Suite: Judy Blue Eyes\n\n\n\nD                   C           G       D       A          G     Gsus7\nIt's getting to the point where I am no fun any-more, I am sorry.\nD            C                D            A          G      Gsus7\nSometimes it hurts so badly I must cry out loud, I am lonely.\n     D              A             G             Gsus7      D           G\nI am yours, you are mine, you are what you are, you make it ha..a..a..ard.\n\nD                   C         G        D               A                    G     Gsus7\nRemember what we've said, and done and felt about each other, oh babe, have mercy.\nD             C     G            D               A             G        Gsus7\nDon't let the past, remind us of what we are not now, I am not dreaming.\n     D              A             G             Gsus7       D           G\nI am yours, you are mine, you are what you are, you make it ha..a..a..ard.\n\nD            C    G            D            A             G      Gsus7\nTearing your-self away from me now, you are free and I am crying.\nD             C            G         D            A                     G      Gsus7\nThis does not mean I don't love you, I do, that's forever, yes, and for always.\n     D              A             G             Gsus7       D           G\nI am yours, you are mine, you are what you are, you make it ha..a..a..ard.\n\nD            C       G               D             A                     G         Gsus7\nSomething in-side is telling me that I've got your secret. Are you still listening?\nD           C        G            D           A           G        Gsus7\nFear is the lock and laughter the key to your heart and I love you.\n     D              A             G             Gsus7           D           G\nI am yours, you are mine, you are what you are, and you make it ha..a..a..ard,\nG               D     G               D     G               D           G\nand you make it hard, and you make it hard, and you make it ha..a..a..ard.\n\nD                             G          Gsus7                D\nFriday evening, Sunday in the afternoon, what have you got to lose?\n                                     G            Gsus7                D\nTuesday morning, please be gone, I'm tired of you what have you got to lose?\nC                         G\nCan I tell it like it is, listen to me baby-\nC                                 G                                      D\nit's my heart that's a suffering, it's a-dying and that's what I have to lose.\n\nD                                G         Gsus7              D\nI've got an answer. I'm going to fly away, what have I got to lose?\nD                                  G          Gsus7\nWill you come see me Thursdays and Saturdays? What have you got to lose?\n\nC              D       C             D\nChestnut brown canary, ruby throated sparrow,\nC      Bm Am  C        Bm Am  C                D\nsing a so-ng, don't be lo-ng, thrill me to the marrow.\nC             D       C               D\nVoices of the angels, ring around the moonlight,\nC      Bm  Am    C      Bm Am  C                     D\nasking me, said, she so fr-ee, how can you catch the sparrow?\nC             D       C              D\nLacy, lilting lyrics, losing love la-menting.\nC         Bm Am  C       Bm Am   C     D\nChange by li-fe, make it ri-ght, be my lady.\n\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\nG           Am      Em C     D\nDo do do do do, do..do do do do do\n\nChords Used\nD- [x00232]  Gsus7- [320011]\nC- [032010]     Bm- [xx0432]\nG- [320003]     Am- [x02210]\nA- [002220]     Em- [022000]Tabs too difficult? Try these easy step-by-step video lessons and learn fast!"
+  },
+  {
+    "titulo": "La colina de la vida",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "Bm",
+    "miTono": "Bm",
+    "letra": "La colina de la vida                                       león gieco\n\nBm\nCasi, casi nada me resulta pasajero,\n D                   G\ntodo prende de mis sueños\nBm                   E           A G\ny se acopla en mi espalda y así subo,\n D                  G         Bm\nmuy tranquilo la colina de la vida.\n\nNunca me creo en la cima o en la gloria,\nése es un gran fantasma\ncreado por generaciones pasadas.\nAtascado en el camino de la vida...E,A,G\n\n\nBm                  E\nLA REALIDAD DUERME SOLA EN UN ENTIERRO,\nA                       Bm\nY CAMINA TRISTE POR EL SUEÑO DEL MÁS BUENO.\nBm                 A                      F#\nLA REALIDAD BAILA SOLA EN LA MENTIRA Y EN UN BOLSILLO TIENE\n Bm    A    G       Bm      A    G       Bm       A     G Bm\nAMOR Y ALEGRÍA, UN DIOS DE FANTASÍA, LA GUERRA Y LA POESÍ-A.\n\n\nTengo de todo para ver y creer,\npor obviar y no creer,\ny muchas veces me encuentro solitario\nllorando en el umbral de la vida.\n\nBusco hacer pie en el mundo al revés,\nbusco algún buen amigo\npara que me atrape algún día\ntemiendo hallarla muerta a la vida.\n\n\nLA REALIDAD..."
+  },
+  {
+    "titulo": "Los sobrevivientes",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "Gm",
+    "miTono": "Gm",
+    "letra": "los sobrevivientes\n\n\nGm        A7       Cm7  D7/9\n Estamos ciegos de ver,\nGm        A7         Cm7\n cansados de tanto andar,\nEb/F     F/Eb       Bb/D\n estamos hartos de huir\n         Dsus4  D\nen la ciudad.\n\nNunca tendremos raíz,\nnunca tendremos hogar,\ny sin embargo ya ves\nsomos de acá.\n\n                     Gm           Am7\nVibramos como las campanas como iglesias\n        Bb              C\nque se acercan desde el sur\n  Gm          Am7\ncomo vestidos negros\n        Bb          C\nque se quieren desvestir.\n\n\nYo siempre te he llevado\nbajo mi bufanda azul\n         Cm          D7\npor las calles como Cristo\n       Gm\na la cruz...\n\nInter: G\n\nEstamos ciegos de ver,...\n\nNunca tendremos raíz,...\n\nVibramos como las campanas...\n\nYo siempre te he llevado...\n\nEstamos ciegos de ver,...\n\nNunca tendremos raíz,...\n\n Bb/D        Eb/F       F/Eb\n||||||      ||||||     ||0|00 1\n||||||      ||||||     |||0||\n||000| 3    ||00|0 3   ||||||\n||||||      ||||0|     ||||||\n|0||||      ||||||     ||||||"
+  },
+  {
+    "titulo": "Lost",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "Em",
+    "miTono": "Em",
+    "letra": "INTRO: Em7 - C - G - D     x2\n\nVERSE 1:\nEm7              C         G\nJust because I'm losing\n        D         Em7    C   G\nDoesn't mean I'm lost\n        D         Em7     C   G\nDoesn't mean I'll stop\n        D            Em7     C   G  D\nDoesn't mean I would cross\n\nVERSE 2:\n\nEm7              C         G\nJust because I'm hurting\n        D         Em7     C   G\nDoesn't mean I'm hurt\n        D             Em7      C    G\nDoesn't mean I didn't get what I deserved\n   D             Em7     C   G\nNo better and no worse\n\nCHORUS:\n           D\nI just got lost\n                   C     G  D\nEvery river that I tried to cross\n                   C     G  D\nEvery door I ever tried was locked\n         C\nOhhh and I'm...\n     G                            D\nJust waiting 'til the shine wears off\n\nRemember the riff:\nE|----------7---|-----------5------|\nB|-------5------|--------3---------|\nG|-5--7---------|--4--5------------|\nD|--------------|------------------|\nA|--------------|------------------|\nE|--------------|------------------|\n\nVERSE 3:\n\nEm7             C         G\nYou might be a big fish\n     D      Em7     C   G\nIn a little pond\n        D           Em7\nDoesn't mean you've won\n        C        G      D      Em7     C      G\n'Cause along may come a bigger one\n\nlost\nCHORUS:\n               D\nAnd you'll be lost\n                     C     G  D\nEvery river that you tried to cross\n                   C     G   D\nEvery gun you ever held went off\n         C\nOhhh and I'm...\n     G                            D\nJust waiting 'til the firing stops\n         C\nOhhh and I'm...\n     G                            D\nJust waiting 'til the shine wears off"
+  },
+  {
+    "titulo": "Lovely Rita",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "B",
+    "miTono": "B",
+    "letra": "Intro:\n\n|-----------------|-----------------|-----------------|---------------|\n|-4---4---4---0---|-2---2---2-------|-----------------|---------------|\n|-4---4---4-------|-2---2---1-------|-------------1---|---------------|\n|-4---4---4---1-2-|-2---2---2---2-2-|(2)----------1-2-|-4---4---4-----|\n|---2---2---2-----|---0---0---0-4-0-|-2---2---2-2-2---|-6---6---6-----|\n|-----------------|-----------------|-4-0-4-0-4-------|---7---7-------|\n\n\nCHORUS\n\nB           A                           B\nLovely Rita meter maid      Lovely Rita meter maid\n\n\nE           D     A    E                  B\nLovely Rita meter maid nothing can come between us\nC#m                 F#7             B\nWhen it gets dark I tow your heart away\n\nE             A             D                G\nStanding by a parking meter  when I caught a glimpse of Rita\nE                          B\nfilling in a ticket in her little white book\n\nIn a cap whe looked much older, and the bag across her shoulder\nmade her look a little like a military man\n\n|E C#m F#m7 B7|\n\nE           D     A    E                D\nLovely Rita meter maid may I enquire discreetly\nC#m                  F#7               |B   A/B   |G#m/B   F#m/B   |\nWhen are you free to take some tea with me?\nE6/B        B7          |E    D A|E   B7   |E   F#7   |B7          |\nAh                Rita\n\n\nCHORUS\n\n\nTook her out and tried to win her, had a laugh, and over dinner\ntold her I would really like to see her again\nGot the bill and Rita paid it, took her home, I nearly made it,\nsitting on the sofa with a sister or two\n\nOh, lovely Rita, meter maid, where would I be without you?\nGive us a wink and make me think of you\n\n\nCHORUS\n\n\nC#m = xx2120\nF#7 = xx4320\nF#m7 = xx2222\nB7 = x21202\nA/B = x2222x\nG#m/B = x2110x\nF#m/B = x24222\nE6/B = x22120"
+  },
+  {
+    "titulo": "Loving Cup",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nLoving Cup              by Jagger/Richards\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nD                  C                 G\nI'm the man on the mountain, come on up\nD                      C                          G\nI'm the plowman in the valley with a face full of mud\n         C                                   G\nYes I am fumbling and I know my car won't start\n         C                                   G\nYes I am stumbling and I know I play a bad guitar\n\nF              C                        G\nGive me little drink from your loving cup\nF        C                            G\nJust one drink and I'll fall down drunk\n\n        [repeat previouss chord pattern]\nI'm the man who walks the hillside in the sweet summer sun\nI'm the man who brings you roses when you ain't got none\nWell, I can run and jump and fish, but I won't fight\nYou if you want to push and pull with me all night\n\n        [repeat previous chord pattern]\nGive me little drink from your loving cup\nJust one drink and I'll fall down drunk\n\nBm        Am                    G                     D\nI feel so humble with you tonight just sitting by the fire\nBb\nSee your face dancing in the flame, feel your mouth kissing me again\nBb                                      D\nWhat a beautiful buzz, what a beautiful buzz\n                 C                      G\nWhat a beautiful buzz, what a beautiful buzz\nD                        C                      G\nOhhhhh, what a beautiful buzz, what a beautiful buzz\n\n          C                               G\nYes, I am nitty gritty and my shirt's all torn\n            C                                     G\nBut I would love to spill the beans with you till dawn\n\n        [repeat previous chord pattern]\nGive me little drink from your loving cup\nJust one drink and I'll fall down drunk\n\nG\nGimme little drink (repeat a few times...)\n\nD                         C                      G\nOhhhhhh, what a beautiful buzz, what a beautiful buzz (repeat 2 or 3 times..)"
+  },
+  {
+    "titulo": "Muchacha ojos de papel",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "Muchacha ojos de papel\nIntro:\n\ne.-------------------0-3-0-3-|-0h3----------------0-3-0-3--0-3-0-3-|\nB.-----0-----0--0--0-1-3-1-3-|-----0---0---0---0--1-3-1-3--1-3-1-3-|\nG.----0-----0--------0-0-0-0-|----0---0---0----0--0-0-0-0--0-0-0-0-|\nD.-0h2---0h1---0-----2-0-2-0-|--------------------2-0-2-0--2-0-2-0-|\nA.----------------4--3-2-0-2-|--3----2---1---0----3-2-0-2--3-2-0-2-|\nE.-------------------------3-|--------------------------3--------3-|\n\nG   D       Em7                   Am7              D\n  Muchacha ojos de papel, ¿adónde vas?, quédate hasta el alba;\nG   D      Em7                      Am7             D\n  muchacha pequeños pies, no corras más, quédate hasta el alba.\nRiff\n  Sueña un sueño despacito entre mis manos\nC           G              Am7     D\n  hasta que por la ventana suba el sol;\nG   D      Em                       Am7  D               G\n  muchacha piel de rayón, no corras más,    tu tiempo es hoy.\n              C      G          Bb     G\n  Y no hables más, muchacha corazón de tiza,\n         C    G           Am7       G\n  cuando todo duerma te robaré un color\n              C      G          Bb     G\n  -y no hables más, muchacha corazón de tiza,\n          C    G           Am7       G\n   cuando todo duerma te robaré un color-..."
+  },
+  {
+    "titulo": "¿Para quién canto yo entonces?",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "A",
+    "miTono": "A",
+    "letra": "Para quie'n canto yo entonces\n\n\nA           D          E\nPara quie'n canto yo entonces\nBm       E         F#m     D   E4  E\nSi los humildes nunca me entienden\nA         D           E\nSi los hermanos se cansan\nBm           Em          F#m   D   E4  E\nde oir las palabras que oyeron siempre\nA          Dm           B7              E\nSi los que saben no necesitan que les ense~e\nA            Dm             B7               E\nSi el que yo amo todavi'a esta' dentro de tu veintre\nD        A      E     A\nLalarara larara lararara\n\nI:\nYo canto para esa gente\npor que no soy ma's que alguno de ellos\nellos escriben las cosas\ny yo les pongo melodi'a y verso\nSi cuando grito vienen los otros y entonces callo\nSi so'lo puedo ser ma's honesto que mi guitarra\n\nII:\nG  D          A\nyo canto para usted\nG       D           E    E4\nel que atrasa los relojes\n       A    C#m     F#m    D\nel que ya jama's podra' cambiar\nF#m               A\ny no se da cuenta nunca\n       E         A\nque su casa se derrumba"
+  },
+  {
+    "titulo": "Por probar el vino y el agua salada",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "G",
+    "miTono": "G",
+    "letra": "G                   C/G                  G\nJulia que baila con tachos y calles y el mar\n     D          G   C/G   G   C/G\nya será,   ya será\nG                C/G                 G\nla prometida del rey de los locos, quizas\n       D       Em\no tal vez partirá\nC          G            Em    C           G\nen la madrugada con el nuevo sol en la nariz\n       Bm                G7     C\npor probar el vino y el agua salada\n        Am            D          G\npor olvidarse de ser rey y ser feliz\n\nG                   C/G                  G\nLos cu-cus lloran, los diarios no salen jamás\n          D             G   C/G   G     C/G\nya no hay pan, ya no hay sal\nG                C/G                 G\nlas niñas han regalado sus piernas al mar\nD       Em\nSatanás volverá\nC          G            Em    C           G\navíen castigarnos por dudar del rey de este lugar\n       Bm                G7     C\npor probar el vino y el agua salada\n        Am            D          G\npor la gente murió nuestro rey, en paz\n\nBm       A/C#    D   G7     F Em\nComo te puedes reír así, hermosa\nAm                  G\ncuando forzaste mi mente\nBm        A/C#   D  G7     F Em\ncomo te puedes reír así, hermosa\nAm                 G\ncuando mataste mi gente\nBm                 G7        C\npor probar el vino y la mermelada"
+  },
+  {
+    "titulo": "Promesas sobre el bidet",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "Gm",
+    "miTono": "Gm",
+    "letra": "Intro:[Dm7  Gm7  Am7] x2\n\n      Gm7              Am7         Dm7\nPor favor, no hagas promesas sobre el bidet.\n      Gm7              Am7        Dm7\nPor favor, no me abras más los sobres.\n      Gm7           Am7       Dm7\nPor favor, yo te prometo te esperaré\n            BbMaj7        Csus4\nsi es que paro de correr.\n\nPor favor, sigue la sombra de mi bebé,\npor favor, no bebas más, no llores.\nPor favor, yo te prometo, te escribiré\nsi es que para de llover.\n\nF                     EbMaj7/F           Dm7\n Porque me tratas tan bien me tratas tan mal.\n   BbMaj7\n¿Sabés que no aprendí a vivir?\nF                  Fm               Dm7\n A veces estoy tan bien, estoy tan down,\n  EbMaj7\ncalambres en el alma.\nDm7    A/C#        Am/C       Bø\nCada cual tiene un trip en el bocho,\n  BbMaj7       Am7\ndifícil que lleguemos a\n  Csus4          Dm7  Gm7  Am7\nponernos de acuerdo.\n            Dm7  Gm7  Am7\nDe acuerdo...\n\nInter: con acordes de la 1ª estrofa.\n\nPorque me tratas tan mal me tratas tan bien....\n\nDe acuerdo..."
+  },
+  {
+    "titulo": "Quizás porque",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "           D\n  Quizas porque no soy un buen poeta\n           D7+\n  puedo pedirte que te quedes quieta\n            Bm   F#m          C   A7\n  hasta que yo termine estas pala-bras\n\n           D\n  Quizas porque no soy un gran artista\n          D7+\n  puedo decir: \"tu pintura esta  lista\"\n          Bm   F#m       C     A7\n  y darte orgulloso este mamarracho\n\n   G                A           D\n  Quizas porque no soy de la nobleza\n            F#                   Bm\n  puedo nombrarte mi reina y princesa\n   Bm/A           E7                     A7\n        y darte corona de papel y cigarrillo\n\n   G             A              D\n  Quizas porque soy un mal negociante\n          F#               Bm\n  no pido nada a cambio de darte\n   Bm/A           E7                     A7\n        lo poco que tengo, mi vida y mis suenos\n\n           D\n  Quizas porque no soy un buen soldado\n           D7+\n  dejo que ataques de frente y costado\n         Bm   F#m            C      A7\n  cuando discutimos nuestros proyectos\n\n  D                F#7        Bm A E7\n  Quizas porque no soy nada de e e so\n           A              A7  D\n  es que estas aqui en mi le-cho"
+  },
+  {
+    "titulo": "Savoy Truffle",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "E",
+    "miTono": "E",
+    "letra": "savoy truffle\n\n\nE7           E                  E7\nCream tangerine and montelimat\nF#                                   A\nA ginger sling with a pineapple heart\nG                                     B7\ncofee dessert yes you know its good news\n     Em                       A7               Em6        A7        Cmaj7  G\nbut you'll have to have them all pulled out after the savoy truffle\n\n\nE7           E                  E7\nCool cherry cream nice apple tart\nF#                                      A\nI fell you taste all the time were a part\nG                                         B7\ncoconut fudge really blows down those blues\n     Em                       A7           Em6         A7           Cmaj7  G\nbut you'll have to have them all pulled out after the savoy truffle\n\n\nEm                        A\nyou might night feel it now'\n          Asus        A                  G          B\nwhen the pain cuts through you're gonna know and how\nEm                               A\nthe sweat is gonna fill your head\n         Asus        A           G           B\nwhen it becomes too much you'll shout outloud\n\n\nsolo    E4bars  F#2bars  A2bars  G2bars  B71 1/2\n\n        Em                A7          Em6           A7        Cmaj7  G\nBut you'll have to have them all pulled out after the Savoy Truffle\n    Em                     A\nYou know what you eat you are\n             Asus   A       G     B\nbut what is sweet now turns so sour\nEm                   A\nwe all know Obadiblada\n             Asus  A      G     B\nbut can you show me where you are\n\nE7           E             E7\nCream Tangerine and montelimat\nF#                                 A\na ginger sling with a pineapple heart\nG                                        B7\ncoffee dessert yes you know it's good news\n            Em                A7             Em6       A7        Cmaj7  G\nBut you'll have to have them all pulled out after the savoy truffle\n           Em                 A7             Em6       A7         Cmaj 7    G\nYes you'll have to have them all pulled out after the savoy truffle"
+  },
+  {
+    "titulo": "Shine a Light",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "C",
+    "miTono": "C",
+    "letra": " SHINE A LIGHT (The Rolling Stones)\n       __________________________________\n\n\n C                        G\n Saw you stretched out in Room Ten O Nine\n        Am                       G\n With a smile on your face and a tear right in your eye\n F                     C          G    F               C   G\n Couldn't see to get a line on you, my sweet honey love\n\n Berber jew'lry jangling down the street\n Make you shut your eyes at ev'ry woman that you meet\n Could not seem to get a high on you, my sweet honey love\n\n chorus\n\n  C                         G\n  May the good Lord shine a light on you\n  Am         F            C              G\n  Make every song you sing your favorite tune\n  May the good Lord shine a light on you\n  Warm like the evening sun\n\n\n Well, you're in the alley, baby, with your clothes all torn\n And your late night friends leave you in the cold gray dawn\n Just seemed too many flies on you, I can't brush them off\n Angels beating all their wings in time\n With smiles on their faces and a gleam right in their eyes\n Thought I heard on sigh for you\n Come on up, come on up, now, come on up now\n\n  chorus"
+  },
+  {
+    "titulo": "Todos los días un poco",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "C",
+    "miTono": "C",
+    "letra": "todos los dias un poco\n\n\nLa/Do#               Re\nSi una estrella más cayó,\nLA/C#        Re      F#m7\neste cielo llora.\nSim7            Fa#m    Mi\nSi nadie reclama luna y luz,\nSim7    Mi   LA9\neste mar ya se secó.\n\nSi un beso es uno más,\nesta boca espera.\n Si una campana no suena,\nel silencio se durmió.\n\n  Re/F#     Rem/F     LA/Mi   Si/Re#\nLlaman y llaman las flores al sol,\n  Re        Mi4  Mi    Sim7   MI    La9\njuegan y juegan todos los días al amor\n\nRe/F#     Rem/F       LA/Mi        Si/Re#\nSi no me llamas como lo hace la flor,\nRe        Mi4  Mi           Sim7      MI    La9\nte iré olvidando todos los días un poco.\n\nSi otro árbol desnudó,\nel verano muere.\nSi nadie le exige al viento,\nesta nube aquí paró.\n\n\n Si un año más pasó,\nla vida es más corta.\nSi no sacudes al tiempo,\nni un intento queda en vos.\n\nLlaman y llaman las flores al sol,\njuegan y juegan todos los días al amor.\nSi no me llamas como lo hace la flor,\n                     Sim7     Mi        La4 La\nme iré muriendo todos los días un poco."
+  },
+  {
+    "titulo": "Us and Them",
+    "sub": "Pink Floyd - Us And Them (Waters, Wright)",
+    "ritmo": "Rock en inglés",
+    "tono": "D",
+    "miTono": "D",
+    "letra": "Dsus2  Esus2/D  Dm(maj7)  G/D  Dsus2\n\nDsus2  Esus2/D  Dm(maj7)  G/D  Dsus2\n\n\nDsus    Esus2/D     Dm(maj7)\nUs, and them\n\n                         G/D            D  (A/D)  (D)  A/D\nAnd after all we're only ordinary men.\n\nDsus2   Esus2/D     Dm(maj7)\nMe, and you.\n\n                             G/D                    D  A/C#\nGod only knows it's not what we would choose to do.\n\nBm\nForward he cried from the rear\n\n              Bm/A  D/G  C\nand the front rank died.\n\n    Bm                                    A\nThe general sat and the lines on the map\n\nD/G                C\nmoved from side to side.\n\n\nDsus2     Esus2/D  Dm(maj7)\nBlack and blue\n\n                                 G/D            Dsus2\nAnd who knows which is which and who is who.\n\n       Esus2/D  Dm(maj7)\nUp and down.\n\n                         G/D                         D  A/D A/C#\nAnd in the end it's only round and round and round.\n\n Bm\n\"Haven't you heard? It's a battle of words\"\n\nBm/A  D/G         C\nthe poster bearer cried.\n\n Bm\n\"Listen son\", said the man with the gun\n\n Bm/A    D/G          C\n\"There's room for you inside.\"\n\n\nDsus2  Esus2/D  Dm(maj7)  G/D  A/D\n\nDsus2  Esus2/D  Dm(maj7)  G/D  Dsus2\n\nBm  Bm/A  D/G  C  Bm  A  Bm  Bm/A  G  C\n\n\nDsus2    Esus2/D    Dm(maj7)\nDown and out\n\n                                 G/D                D\nIt can't be helped but there's a lot of it about.\n\nDsus2     Esus2/D   Dm(maj7)\nWith, without.\n\n                               G/D                  D\nAnd who'll deny it's what the fighting's all about?\n\nBm\nOut of the way, it's a busy day\n\nBm/A D/G              C\nI've got things on my mind.\n\n        Bm\nFor the want of the price of tea and a slice\n\nBm/A D/G    C\nThe old man died."
+  },
+  {
+    "titulo": "Violet",
+    "sub": "",
+    "ritmo": "Rock en inglés",
+    "tono": "C#m",
+    "miTono": "C#m",
+    "letra": "VERSE 1:\n      C#m\nWas a long and dark December\n                    C#m7\nFrom the rooftops I remember\n          A   Asus2    F#m      F#5  F5  E5  Eb5   (strum quickly)\nThere was snow, white snow\n  C#m\nClearly I remember from the windows\n          C#m7               A       Asus2\nThey were watching while we froze...\n        F#m        F#5  F5  E5  Eb5\nDown below\n\nCHORUS:\n          A\nWhen the future's architectured\n     B                     C#m\nBy a carnival of idiots on show\n                 B\nYou'd better lie low\nG#m     A   G#m  E        C#m B6  C#m\nIf you love me, won’t you let me know?\n\nVERSE 2:\n      C#m\nWas a long and dark December\n                       C#m7\nWhen the banks became cathedrals\n        A  Asus2      F#m         F#5  F5  E5  Eb5\nAnd the fox    became God\n C#m\nPriest clutched onto bibles\n                          C#m7\nHollowed out to fit their rifles\n         A   Asus2      F#m        F#5  F5  E5  Eb5\nAnd the cross was held aloft.\n\nCHORUS:\nA\nBury me in armour\n         B\nWhen I’m dead and hit the ground\n              C#m           B\nMy nerves are poles that unfroze\n    G#m     A   G#m  E        C#m B6  C#m\nAnd if you love me, won’t you let me know?\n\nGUITAR SOLO:\n\n     C#m                                 C#sus2\nE||----------------------------|-----------------------------|\nB||----------------------------|-----------------------------|\nG||----------------------------|-----------------------------|\nD||--2-1---2-------------------|--2-1---2--------------------|\nA||------4-------2-----4-------|------4-------2-2----4-------|\nE||-----------4-----4-----2----|-----------4------4-----2----|\n\n  A         Asus2               F#m                F#5  F5 E5 Eb5\n|-----------------------------|-----------------------------------|        Repeat two times\n|-----------------------------|-----------------------------------|\n|-----------------------------|---------------------11--10--9--8--|\n|--2-1---2--------------------|--2-1---2------------11--10--9--8--|\n|------4-------2-2----4-------|------4-------2------9---8---7--6--|\n|-----------4------4-----2----|-----------4-----4-----------------|\n\nCHORUS:\n        A\nI don’t wanna be a soldier\n        B\nwho the captain of some sinking ship\n      C#m\nwould stow\n    B\nfar below...\n    E/G#    A   G#m  E        C#m    B6     C#m\nSo, if you love me, why’d you let me go?\n\nOUTRO:\n(C#m)     E    A        E     G#m      A\nI took my love down to Violet Hill\n        C#m     G#m   A\nThere we sat    in    snow\nA   B    C#m  F#m     E         G#m\nAll that time she was silenced still\n    G#m    A    G#m  E        C#m  B   C#m          A\nSo, if you love me, won’t you let  me  know?\nG#m    A    G#m  E        C#m  B  C#m\nIf you love me, won’t you let  me know?"
+  },
+  {
+    "titulo": "Yo era el rey",
+    "sub": "",
+    "ritmo": "Rock en castellano",
+    "tono": "Ebm",
+    "miTono": "Ebm",
+    "letra": "Ebm           Db               B            Bbsus4 - Bb\nYo era el rey de este lugar, vivía en la cima de la colina.\n           Ebm              Db               B            Gb - Db\nDesde el palacio se veía el mar, y en el jardín la corte reía.\n         Gb              E   Ebsus4-Eb    B    Bbm Abm     Db7sus4-Db7\nTeníamos sol, vino a granel,           y así pasábamos los días;\n           Gb        Bb     Ebm    B                     Bbsus4-Bb\ntomando el té, riéndonos al fin, ¿por qué murió la gente mía?\n\n          Ebm           Db               B             Bbsus4 - Bb\nYo era el rey de este lugar, aunque muy bien no lo conocía,\n            Ebm                 Db               B           Gb - Db\ny me habían dicho que atrás del mar el pueblo entero pedía comida.\n       Gb             E     Ebsus4-Eb     B    Bbm  Abm  Db7sus4-Db7\nNo los oí, que vil razón...           les molestaba su barriga.\n          Gb          Bb   Ebm   B                        Bbsus4-Bb\nYo era su rey, así lo dijo dios. Yo era el amor, la luz divina.\n\n          Ebm           Db                 B           Bbsus4 - Bb\nYo era el rey de este lugar, hasta que un día llegaron ellos;\n         Ebm          Db             B            Gb   -   Db\ngente brutal, sin corazón, que destruyó el mundo nuestro.\n        Gb           E    Ebsus4-Eb    B     Bbm   Abm    Db7sus4-Db7\n“Revolución, revolución”,           cantaban las furiosas bestias.\n            Gb              Bb    Ebm  B                     Bbsus4-Bb\nLa corte al fin fue muerta sin piedad, y mi mansión hoy es cenizas.\n\nEbm - Db -  B  - Ebm  Ebm - Db -  B  - Ebm\nLi  - i  - ber - tad, li  - i  - ber - tad.\n\ninter: Ebm  Db  B  Ebsus9    Ebm  Db  B  Ebm\n\n          Ebm           Db               B            Bbsus4 - Bb\nYo era el rey de este lugar, tenía cien capas de seda fina,\n           Ebm              Db\ny estoy desnudo, si quieren verme,\n   Ebm               Db    B-Ebm     Ebm               Db    B-Ebm\nbailando a través de las colinas, bailando a través de las colinas.\n\n   Ebm               Db    B -Ebm  Db-Ebm  Gb-Ab\nBailando a través de las coli-nas,\n   Li        -       i  - ber-tad,\n   Ebm               Db    B -Ebm  Db-Ebm  Gb-Ab\nbailando a través de las coli-nas,\n   li        -       i  - ber-tad,\n   Ebm               Db    B -Ebm  Db-Ebm  Gb-Ab\nbailando a través de las coli-nas,\n   li        -       i  - ber-tad,\n   Ebm               Db    B -Ebm  Db-Ebm  Gb-Ab\nbailando a través de las coli-nas,\n   li        -       i  - ber-tad,\n   Ebm               Db    B -Ebm  Db-Ebm  Gb-Ab\nbailando a través de las coli-nas,\n   li        -       i  - ber-tad,\n\noutro: (Ebm) Ebm  Db  B  Dbm     Ebm  Db  B  Db"
+  }
 ];
